@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>從黃全兩學案講到章實齋文史通義 - Mdbook Template</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="弁言.html">弁言</a></li><li class="chapter-item expanded affix "><li class="part-title">通覽</li><li class="chapter-item expanded "><a href="中國史學名著.html"><strong aria-hidden="true">1.</strong> 中國史學名著</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="尚書.html"><strong aria-hidden="true">1.1.</strong> 尚書</a></li><li class="chapter-item expanded "><a href="春秋.html"><strong aria-hidden="true">1.2.</strong> 春秋</a></li><li class="chapter-item expanded "><a href="春秋三傳.html"><strong aria-hidden="true">1.3.</strong> 春秋三傳</a></li><li class="chapter-item expanded "><a href="左傳（附國語、國策）.html"><strong aria-hidden="true">1.4.</strong> 左傳（附國語、國策）</a></li><li class="chapter-item expanded "><a href="史記.html"><strong aria-hidden="true">1.5.</strong> 史記</a></li><li class="chapter-item expanded "><a href="漢書.html"><strong aria-hidden="true">1.6.</strong> 漢書</a></li><li class="chapter-item expanded "><a href="范曄後漢書和陳壽三國志.html"><strong aria-hidden="true">1.7.</strong> 范曄後漢書和陳壽三國志</a></li><li class="chapter-item expanded "><a href="綜論東漢到隋的史學演進.html"><strong aria-hidden="true">1.8.</strong> 綜論東漢到隋的史學演進</a></li><li class="chapter-item expanded "><a href="高僧傳、水經注、世說新語.html"><strong aria-hidden="true">1.9.</strong> 高僧傳、水經注、世說新語</a></li><li class="chapter-item expanded "><a href="劉知幾史通.html"><strong aria-hidden="true">1.10.</strong> 劉知幾史通</a></li><li class="chapter-item expanded "><a href="杜佑通典.html"><strong aria-hidden="true">1.11.</strong> 杜佑通典</a></li><li class="chapter-item expanded "><a href="歐陽脩新五代史與新唐書.html"><strong aria-hidden="true">1.12.</strong> 歐陽脩新五代史與新唐書</a></li><li class="chapter-item expanded "><a href="司馬光資治通鑑.html"><strong aria-hidden="true">1.13.</strong> 司馬光資治通鑑</a></li><li class="chapter-item expanded "><a href="朱子通鑑綱目與袁樞通鑑紀事本末.html"><strong aria-hidden="true">1.14.</strong> 朱子通鑑綱目與袁樞通鑑紀事本末</a></li><li class="chapter-item expanded "><a href="鄭樵通志.html"><strong aria-hidden="true">1.15.</strong> 鄭樵通志</a></li><li class="chapter-item expanded "><a href="馬端臨文獻通考.html"><strong aria-hidden="true">1.16.</strong> 馬端臨文獻通考</a></li><li class="chapter-item expanded "><a href="黃梨洲的明儒學案、全謝山的宋元學案.html"><strong aria-hidden="true">1.17.</strong> 黃梨洲的明儒學案、全謝山的宋元學案</a></li><li class="chapter-item expanded "><a href="從黃全兩學案講到章實齋文史通義.html" class="active"><strong aria-hidden="true">1.18.</strong> 從黃全兩學案講到章實齋文史通義</a></li><li class="chapter-item expanded "><a href="章實齋文史通義.html"><strong aria-hidden="true">1.19.</strong> 章實齋文史通義</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">天漢春秋</li><li class="chapter-item expanded affix "><li class="part-title">核心問題</li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Mdbook Template</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="從黃全兩學案講到章實齋文史通義"><a class="header" href="#從黃全兩學案講到章實齋文史通義">從黃全兩學案講到章實齋文史通義</a></h1>
+<p>今天我們接著上次講的《明儒學案》、《宋元學案》，還有一些附帶要講的話。這兩《學案》，一方面收集了很多名家語錄，以及文集裡的東西。另一方面它們都有一篇「小傳」，是很重要的。我們可以說，在中國史學方面，來寫一種學人傳記，這本來很早就有。如《史記》、《漢書》一路下來，都有〈儒林傳〉、〈文苑傳〉這一類。若使其人在歷史上地位很高，便不寫進〈儒林〉、〈文苑〉等分類的傳裡去，而為特立專傳。如《史記》有〈董仲舒傳〉，《後漢書》有〈鄭康成傳〉，皆不併入〈儒林傳〉裡去。〈文苑傳〉也一樣，很多大文學家不列〈文苑傳〉，如《唐書》有〈韓愈傳〉，不入〈文苑傳〉。總之，在中國紀傳體的正史裡，就包括有學者的傳記。又如前面講到過《高僧傳》，那就等於佛學家的傳記，後來如朱子有《伊洛淵源錄》，那就是理學家的傳記。</p>
+<p>直到黃梨洲寫《明儒學案》，他為每一人作小傳，也就跟著上面這傳統來。我們可以說，中國史裡有「學人傳」，那是遠有淵源的。而梨洲《明儒學案》中，每一篇傳都是非常重要。上半截講其人之生平行事，下半截講他的學術思想，並都附加作者梨洲評語。再下是全謝山的《宋元學案》，他所作傳，從史學上講來，亦有很高地位，有許多材料為《宋史》所不見。但全氏對每一家思想之衡評則不如黃氏。</p>
+<p>今天我所要特別提出者，全氏還有一種大貢獻，在他的文集《鮚埼亭集》裡，有很多文章，都是我所說的學人傳。他多寫明末清初一輩學者，如顧亭林、陸桴亭諸人。文章寫得非常好，此與寫《學案》有相似，而不相干。他純粹是寫他當時的近代學人，有思想、有著作、有行誼、有志節，對後世為學為人可資楷模，有大影響。《鮚埼亭集》裡此類文章頗多，全氏可說是清初康雍時代一個講經史學的人，而愛寫學人傳記。下面到錢大昕（竹汀），其學術途徑，頗與全氏相近。在《錢氏文集》裡，也有很多學人傳記，如他寫〈戴東原傳〉、〈惠定宇傳〉等，都是他當時並世的學人。在那時，學術漸盛，有經學家、有考據學家，或史學家等，他們都有很多著作，在他們的著作裡，也有很多貢獻，為之作傳，須都為之提要鉤玄，加以擇發。此與《宋元學案》、《明儒學案》裡專偏重理學家思想的傳又不同。</p>
+<p>我今天特別舉出全謝山、錢竹汀兩人，此下乾嘉盛世，有不斷的學者，便有不斷的學人新傳，有散篇的，也有彙為專書的。如江藩的《漢學師承記》，共有八卷，後附《宋學淵源記》兩卷，這便略如宋元明學案之例，惟體裁稍變，也可看出在當時所謂漢學、宋學，已然分疆劃界，有了兩個門戶。而此書之特別受人重視，則在他的《漢學師承記》。因其講經學，為經學家作傳，必然要一種新文體，與前面舊的，為講理學家的作傳文體有不同。此項文體，固是全謝山、錢竹汀興起在先，但江鄭堂《漢學師承記》為每一人作傳，還是自己重寫，並不抄襲全、錢兩家，只在大體上則跟著全、錢兩家這條路來。</p>
+<p>從此以後，有清一代就有很多的「碑」與「傳」，後人拿來集合起來，成為一部《碑傳集》。在《碑傳集》中，每一人每有許多文章，或某人為他作傳，某人為他作碑，而為之作傳者，或不只一人，每一傳內容又或各有不同。在今《碑傳集》中所收，固是包括了各方面的人，但我們今天值得特別提出來的，則還是講學術人物的一類。因為在這一類中，可說是開了史學一個新路向，為從前所沒有。</p>
+<p>上面講過，正史裡也有學人傳，像董仲舒、鄭康成之類。可是到了清代，學人傳記就特別盛，而且文體也稍與以前有不同。《碑傳集》之外，又有《碑傳續集》、《三集》、《四集》等。諸位要研究清代學術，經學、史學，乃至文學等等各方面，一切有關史料，這幾部《碑傳集》裡，可說收羅得很詳備。關於這一類的學人傳，可說只有清代特別盛，可稱是清代一代的學術風氣。而此風應是開於全謝山與錢竹汀，這是應該特別提出的。</p>
+<p>若再推而上之，則從黃梨洲《明儒學案》來。因全謝山就是跟著黃梨洲而寫《宋元學案》的。我們要治理學，固該看黃全兩《學案》，而我們要治清代人之經史學，則最好要能讀他們的碑、傳。如說諸位要知道錢竹汀一人的學問，他的著作和文集內容都很龐大，不如先讀有關他的幾篇碑傳，你就知竹汀之學為當時所看重的，他對當時學術界所公認為有貢獻的，都扼要有所敘述。你要知道其他各人亦如此。故清代的幾部《碑傳集》，雖不能說是史學名著，而實際上，在當時史學方面，乃是一種極可寶貴的新風氣與新途徑。不幸到了我們民國以來，這一風氣也就斷了。在社會上，一個人死了，也不能有人來為他寫碑、寫傳。有寫的也不像樣，無史學價值。這究是可寫的人少了呢？還是能寫的人少了呢？如清末之有康有為，至少此人在清末民初關係極大，他也算是一個學術界中的人，但沒有人能提綱挈領就其生平與其著述要言不繁、詳而不漏地為他來寫傳和寫碑。又如章太炎、王國維、梁任公諸人，他們死得遲，可是也該有人能像從前《碑傳集》裡所收的那些樣子來為他們寫傳、寫碑。但近人一則無此筆力，又一則無此學力，此項責任擔不起，卻費幾十萬字來為他們寫年譜。年譜並非要不得，然而費了數十萬言為一人寫一年譜，試問教後人要費幾許精力來讀。後人無此精力，則惟有置之不理。若能如清代人，寫一篇碑傳，便能把某一人之一生和其學術著作究竟是什麼一回事，費幾千一萬字，原原本本、提綱挈領寫下，介紹給大家看，那是何等重要的事，而現在已沒有了。你說這是多少危險，而也是多少淒涼的事呀！</p>
+<p>如梁任公的朋友丁文江，為梁任公作一年譜，厚厚兩大冊，篇幅之大，固是超前，也當絕後。而且年譜中所寫還是一方面的。當知我們寫書不能這麼寫，史學衰落，不僅專在史學上，也連帶在文學上。我們今天已然沒有了寫史的筆力，而且亦沒有讀史的心力，回視清代人工作，豈不內愧。</p>
+<p>我們現在並不要讀史，只要在歷史裡面找材料，東找一點，西找一點，把史書當成一堆材料看。於是只有史料，更無史學，宜乎此下的著史體例也該大變。然而我們並不能從材料中變出學術來，卻要把學術盡變成材料化，這究竟是否該如此變法呢？我們且講學術史，如《史》、《漢》有〈董仲舒傳〉，《後漢書》有〈鄭康成傳〉，固是前史鉅獲，已述如上。又如韓愈為柳宗元作碑，蘇軾為韓愈作碑，此等皆是文學作品，與史傳小有別。又如講朱子生平及其學問，則必讀黃勉齋〈行狀〉，為第一最可考信的資料。又如講程明道，則必讀程伊川〈碑〉，可作為衡評之準則。此等不是在文學上見長，乃是在學術上有其地位。現在人不講究文學，做學問則各鑽一牛角尖，誰也不瞭解誰，各人以專家自命，為他人作傳之事，自就無從談起。所以此下像清代《碑傳集》一類文字會成絕響，不能再續。如此一來，怕會不見再有學者。正如目前風氣，只知讀書，不關心到所讀書的背後之作者一般。而就整個史學言，若不看重傳記，此下的史籍不僅外貌變，內容及其意義也將隨而大大地變。而我們實只是盲目地在變，那是大可憂心的事。</p>
+<p>再就整個學術言，亦是只注意學者們所著一部一部的書，讀者則只在他書裡邊去找材料，整個學問只剩有一部部的書與一堆堆的材料，而沒有了一個個的人。但果真在學術界沒有了人，書也會沒有、材料也會沒有，學術到此也就無可再講了。我所以要特別提出來告訴諸位，當知《明儒學案》、《宋元學案》兩書，對史學上實有大貢獻，大影響，因它開了史學上一條極有意義、有價值的新路。可是到了民國以來就衰了，到了今天就斷了，這真是一件很可惋惜的事。</p>
+<p>我們再另講一點。自《明儒學案》、《宋元學案》以後，尚有江藩的《漢學師承記》、《宋學淵源記》，後來又有唐鑑的《國朝學案》。上面說過全謝山、錢竹汀以及江藩的《漢學師承記》，乃至《碑傳集》裡所收文章，大體上說，皆是一種學人新傳，而這許多學人則都比較偏於講經史之學的。因於學人不同，所以為他們作傳記，文章體例也有不同。至於重來講理學思想的，則如唐鑑的《國朝學案》。但那時還在道光年間，清朝還有向下一大段，所以此書應該不能算是一部清儒學案。而且此書內容也沒有多大價值，遠不能比以前的《明儒》、《宋元》兩《學案》。待到清代完了，就有人想來寫一部從頭到尾的《清儒學案》，照例也自該有此一部學案的。而且《宋元學案》裡也並不純是講理學的纔收，我們儘可仿《宋元學案》例，來一部《清儒學案》也應該。徐世昌所以做了民國大總統退位後就來寫他的《清儒學案》了。此書雖似比唐鑑的書好些，也實是一部沒有多大價值的書，遠不能和黃、全兩《學案》相比。一則此書似出「眾手為之」，你寫一人，我寫一人，由眾手各自搜集材料，分頭來寫，此如正史中之「設官修史」，出於眾手，便不易見精彩。何況是學術史，更貴能成一家言。要寫學術史，必該有作者自己意見，纔能寫成一體例，有條貫，不僅是零碎材料之堆砌。只是零碎材料堆砌，何成學術，又何足言思想？如說《宋元學案》，全謝山死後留下這份稿子，他下面王梓材、馮雲濠還能完全看重謝山遺稿，忠實地替他編輯出來。中間偶有一些添補或移動，都是極為謹慎，務使不失為全氏的一項著作。寫正史尚貴出一手，寫學術史更該有編者該有的見解。司馬遷所謂成一家之言，貴能由客觀中有主觀，由主觀中有客觀，那能只是一堆材料，由許多人拼來寫。當然像唐鑑，自己並無真知灼見，而主觀甚深，他的《國朝學案》固是要不得，而徐世昌書究不知重義理、重考據、重辭章，於三方面只是一堆材料雜湊，其中也不能說沒有幾篇寫得較好的，而總合起來，則並不見清儒學術之精神所在、得失所在。貌似神非，實不能與黃、全兩書並列。我們寫學術史，至少要知一家之學，必有其來龍去脈，這即是他的學問所走的一條路，所以稱之曰學術。亦可說學派，學必有派，即是言一家學問之源流。言學術、學派則必言師承，但言學派師承，卻並不是主張門戶。門戶之見要不得，而師承傳統則不可無。今人不明此意，如說專家，又言創造，則變成各自走一條路，更無源流師承可言。於是高抬方法，重視材料，一切學問只變成一套「方法」，一堆材料而已，又要說客觀，不許有主見，如是則那些做學問的人轉不佔重要地位。如此往下，恐將會沒有學術可言。</p>
+<p>在清代人講學問，當然都是經學最為重要。吳派、皖派，都是講的經學。理學在清代一蹶不振，因此也更沒有程朱、陸王之分。但江藩的《漢學師承記》，究竟主觀太深、太偏了，縱是再寫了一部《宋學淵源記》，只見是分壁壘立門戶，而唐鑑書則入主出奴，更屬門戶之見。而像徐世昌的書，則實是無見。從江書到唐書到徐書，正可見清代中晚期學術之每下愈況。當知搜集材料也須有見。自無見解，所該收的不收，而不該收的反收了。這樣搜集來的材料，即論參考之用，也不很大。</p>
+<p>我自己曾寫過一部《近三百年學術史》，此書在北京大學作講義用。那時梁任公剛過世，他就先有一部《近三百年學術史》，是在清華大學的講義。他死後，有書鋪私自把他書出版，他家裡人提出訴訟，說這書版權當屬梁家，書鋪不能隨便出版，於是此書當時就被禁止流通。而此書受大家看重，還是偷偷私賣。但我正在當時又要來重寫一部，諸位只把我書同梁任公書對讀，便知兩書觀點乃至所收材料，竟也可說完全不同。梁任公在他寫《近三百年學術史》以前，又先寫了一部《清代學術概論》。隨後他自己對概論之書不滿意，所以來重寫《近三百年學術史》，而我寫的又與梁書不同。諸位若要研究此一方面，至少如江書、唐書、徐書、梁書和我所寫，都須約略一看。主要在要瞭解在方法與材料之外，尚別有所謂學問，那是極端重要的一件事。我們儘說「述而不作」，但如何「述」法，儘不容易啊！</p>
+<p>在抗戰時，國立編譯館要編一部宋元明清四朝學案做普及本，邀我參加來寫清代學案。字數時間都限定，我在成都寫了一年，共成四十卷。因那時生活苦，我沒有能叫人重抄一遍，徑把原稿寄到重慶，可是後來此稿擱置久不印，直到抗戰勝利復員，聽說這稿裝在一個箱內，掉在長江裡了。</p>
+<p>最近我在寫《研朱餘瀋》，又在清代寫了陸桴亭、陸稼書、錢竹汀三人。此三人，在我以前所寫《近三百年學術史》裡，只偶爾提到，未有詳寫。而且我此所寫，又與寫《近三百年學術史》作意不同，因此寫法也不同。此三篇，主要是在寫朱子學在清代之展演與傳述，而《近三百年學術史》則主要在寫清代一代學術前後之轉變與遞承。兩書宗旨不同，則運用材料自將不同，而且我的《近三百年學術史》與此最近三篇亦與《明儒學案》、《宋元學案》寫法不同。兩《學案》都在前邊立一篇傳，下面抄列他很多話。我的《近三百年學術史》，前面也有一傳，但並不重要，重要在下面。我卻一氣呵成一篇文章，不是雜抄很多話，偶加案語，如兩《學案》。最近我又寫了一部《朱子新學案》，只寫朱子一人，而寫了一百幾十萬字，書中分八十餘題，每題寫一篇，都是從頭到尾的整篇文章，這又把從前《明儒學案》、《宋元學案》的體例變了，所以我稱此書為《新學案》。下面我們寫學術史，體例會再有變，要之必從我們自己源頭上變下來。我們本可有新的傳記，但卻有人說中國文學裡沒有傳記文學，於是一輩人都要追隨西方來寫傳記文學，一時風起雲湧，如〈秦始皇傳〉啊、〈唐太宗傳〉啊，但此等新作品，較之以前《史》、《漢》、《新》、《舊唐書》寫秦、漢、隋、唐歷史在體例上是否進步了呢，卻沒有人管這些。好像中國固有舊的全不是，只有學西方新的纔是。但我總不免要問，我們作傳記，究該是文學的，抑是史學的，此是首先一大問題。而《宋元學案》下到《碑傳集》一路的變化，無論研究思想、研究文學，此是在中國自己近三百年來文學史學上一大進展，諸位也該拿來仔細一讀，再把來和西方傳記文學作一比較纔是。</p>
+<p>我再附帶講到一位錢基博（子泉），這是我同鄉無錫人，又是我本家，他寫了一書名《現代中國文學史》。實際上，這書也很像《明儒學案》、《宋元學案》之類，他把清末民初許多文學家，每人一傳，綜合敘述。他書體裁或許和我的《近三百年學術史》比較更接近。當然還是有不同。他書裡都是現代人，如康有為、章太炎、梁啟超、胡適之、王國維，近代有名學者，他書裡都有，都是很詳細的一篇一篇為他們作傳。在我《近三百年學術史》裡，則只寫到康有為，有一長篇，以下便不再寫。因我此書只寫死了的人，不寫活在這裡的人。稍後，章太炎死了，我時在北平，燕京大學邀我去作一番講演，我為此又把太炎的《章氏叢書》從頭到尾翻讀一過，當然我可為他寫一篇新的傳記，補進《近三百年學術史》裡去，只是我當時沒有做，只用一篇短的文章記我的講演。後來有太炎所講《國學概論》出版，把我這篇講演筆記也附在底下。我那篇講演辭雖很簡單，但我認為已提出了太炎學問長處。我這兩天，正在寫一篇錢基博《現代中國文學史》的介紹文，我又花三天工夫把他的書從頭再看一遍。我講這些話，要諸位知得傳記文學不易寫，尤其是學人傳記更不易寫。寫某人之事，應懂得在那時代與此人此事相關之事，此不易。寫某一學者之學，應懂得其人之學，以及此學之源流地位，更不易。所以史家也未必能寫學人傳記，如太史公《史記》寫〈孟荀列傳〉、〈老莊申韓列傳〉，內容似很簡略，但非有大學問、大見識，便不能如此命題。《明儒學案》之勝過《宋元學案》，正為黃、全兩人自己的理學修養有高下。而徐世昌《清儒學案》之並無學術價值，理由也在此。</p>
+<p>諸位天天讀書，其實也可說未讀書，因只是注意或翻查了些書中材料，並未讀其書之內容。諸位認為材料即是內容，豈不大錯！所以我勸諸位，不妨去讀一過黃梨洲的《明儒學案》，這不是要諸位去研求陽明學派，做一理學家，只是在歷史名著中有關學術史方面的，諸位至少應讀此一書而已。</p>
+<p>今天我要在黃梨洲、全謝山兩人以後，再特別提到章學誠（實齋）和其書《文史通義》。中國傳統講學問，多只是實事求是，就這一套學問講，卻不講到怎麼來做這一套學問。你讀他的書，如看人繡出的鴛鴦，卻不知他怎麼一針一線地來繡。在中國很少有所謂「概論」般的書，如史學概論、文學概論等。或稱「通論」，此等書極少。我們在史學方面講過一部劉知幾的《史通》，文學上有一部劉勰的《文心雕龍》。在我很看重劉勰《文心雕龍》，更在劉知幾《史通》之上，我已在前講過。第三部書，便是章實齋的《文史通義》，文學、史學兩方都講。近代人常把此三書同稱，我現在講史學名著，應該講《史通》，再講到《文史通義》，卻不去講《文心雕龍》了。</p>
+<p>我對章實齋的學術，在《近三百年學術史》裡有一專篇。今天講章實齋，只就史學名著這課程的一面講，當然同在《近三百年學術史》裡所講有些地方會略不同。普通說，章實齋是清代一史學家，較細地講，章實齋的貢獻特別在他講學術史方面。章實齋自己沒有寫過有關歷史的書，只寫了些地方志，雖亦有關史學，但究已是史學旁枝。所以我說章實齋所貢獻最大處應在他講學術史方面。</p>
+<p>章實齋講歷史有一更大不可及之處，他不站在史學立場來講史學，而是站在整個的學術史立場來講史學，這是我們應該特別注意的。也等於章實齋講文學，他也並不是站在文學立場來講文學，而是站在一個更大的學術立場來講文學。這是章實齋之眼光卓特處。我也可以說，我同諸位講了一年的史學名著，我自己也並不是只站在史學的地位上來講史學。若如此，這就會像劉知幾。而我是站在一般性的學術地位上來講史學，所以我要特別欣賞章實齋。</p>
+<p>章實齋講史學，最重要的，他提出了所謂「六經皆史」之語。這「六經皆史」四個字，陽明也就講過。章實齋自己說，他的學問屬於「浙東學派」，是直從陽明下來的。章實齋又稱顧亭林為「浙西學派」。章實齋這一講法，我並不認為很可靠。首先是陽明學派下邊沒有講史學的人，在整部《明儒學案》中，只有唐荊川一人講史學，可是他不是陽明學派裡一重要的人。其次，章實齋《文史通義》所講的這一套，實也並不接著黃梨洲、全謝山一套來。我很欣賞章實齋從學術史觀點來講學術，但他自己認為他是浙東學派，從陽明之學來，這一點，我實並不很欣賞。那麼該問章實齋的學問究從那裡來？我想他特別是從《漢書．藝文志》來，又兼之以鄭樵《通志》，而創出了章實齋討論古代學術一項重大的創見。章實齋何以能在當時注意到當時人所並不注意的這兩書，在我想，此與清廷編修《四庫全書》一事有關。他因注意分類編目之事，而注意到鄭樵〈校讎略〉與《漢書．藝文志》，而自居為陽明傳統或浙東史學，則是不值我們認真的。</p>
+<p>講中國古代學術，章實齋有其極大的創見，可說從來講學術流變沒有講到這一方面去，而他是根據了《漢書．藝文志》，在大家讀的材料中，發明出大家沒有注意的見解來，此實難能可貴。所以我們要研究章實齋的學說，該先看《漢書．藝文志》，卻不是要去讀陽明《傳習錄》與《明儒學案》。這事很簡單，我告訴諸位，諸位要自己有兩隻眼睛，要自己有見解。我今天講章實齋，而第一句像是先駁了章實齋，他提出所謂浙東之學，自己講他學問傳統來源，而我就有些不信。在我認為，研究他的學問，該看重他講古代學術史，從《漢書．藝文志》入門，然後纔有「六經皆史」一語。他說：「六經皆先王得位行道、經綸世宙之迹，而非託於空言。」這是說，六經只是古代在政治一切實際作為上所遺下的一些東西，並不是幾部「空言」義理的書。我們也可以改說，六經都是「官書」。也可說，六經都是當時衙門裡的檔案。或說是當時各衙門官吏的必讀書。這幾句話，也就是《漢書．藝文志》所謂的「王官之學」。〈六藝略〉是王官之學，也即可稱是貴族之學。這些學問，後來慢慢兒流到民間，才有諸子百家。《漢書．藝文志》就是特別講了這一點，而我們近代學人如胡適之，他就最先寫了一篇〈諸子不出於王官論〉。他沒有想到僅憑幾年外國留學所得的新觀念，無法便把來推翻兩千年前的舊說法。而且如此一來，古代學術史也就無法講。所以民初以來，講古代學術思想的只從春秋末老子、孔子講起，上面便不再提。胡氏又寫了一部《章實齋年譜》，來提倡章氏史學。他不想，既是主張諸子不出於王官，則章實齋六經皆史一語又就無法講。他既要提倡章實齋史學，而又要推翻《漢書．藝文志》，實把章實齋最有心得的在古代學術史上提出的精要地方忽略了。</p>
+<p>章實齋根據《漢書．藝文志》，而對經學與百家言則顯有軒輊。他說：「不衷大道，其所以持之有故而言之成理者，則以本原所出，皆不外於周官之典守。其支離而不合於道者，師失官守，末流之學各以私意恣其說爾。非於先王之道全無所得，而自樹一家之學也。」這樣講法，實是章實齋的不是。我們是現代人，學術眼光放大了，並不定要尊經抑子。但近人又震於章實齋之名，反而對此無駁辭，卻來駁《漢書．藝文志》的諸子出王官論，那真是太無是非別擇了。關於此問題，我們應該分兩方面講：一方面講他的六經皆史。此四字中的這個「史」字，我們近代學者如梁任公，如胡適之，都看錯了。他們都很看重章實齋，但他們對實齋所說「六經皆史」這一個「史」字，都看不正。梁任公曾說：賣豬肉鋪櫃上的帳簿也可作史料，用來研究當時的社會經濟或其他情況。這豈是章實齋立說之原義？章實齋《文史通義》裡所謂的「六經皆史」這個「史」字，明明有一個講法，即在《文史通義》裡就特寫了一篇文章名〈史釋〉，正是來解釋這「史」字，並不像我們近人梁、胡諸氏之所說。所以我要勸諸位，讀書定要讀原書，不要輕信別人講他書的。如諸位要研究陽明學，定要讀陽明自己的書，不要只去看黃梨洲《明儒學案》。當然梨洲是一代大師，《明儒學案》是傳世名著，讀了也可有個入門。可是今天我們的學術界，就並不能根據我們的當代大師一句話來做我們的入門，反恐將無門可入。因我們現代學術界很多話都像是不負責任的，經不過再拿原書來一翻，便見毛病百出，你自然會知道實在並不是這樣一回事。章實齋明明說：「法顯而易守，書吏所存之掌故，實國家制度所存，亦即堯湯以來因革損益之實迹。苟有志於學，則必求當代典章，以切於人倫日用。必求官司掌故，而通於經術精微。則學為實事而文非空言。」他是說六經都是古代的「官司掌故」，如我們說現在教育部、外交部多存有許多檔案，有些是教育部、外交部的職官必須時時繙閱的，此等檔案叫做「史」，掌管這些檔案的人也就叫做「史」。此「史」字猶如說「書吏」，他所掌管的這許多檔案也叫「史」，這即是「掌故」，猶說老東西叫你管著。六經在古代，便是各衙門所掌的一些文件，所以說是王官之學。那麼我們真要懂得經學，也要懂得從自身現代政府的官司掌故中去求，不要專在古經書的文字訓詁故紙堆中去求。這是章實齋一番大理論。清代人講經學卻都是講錯了路，避去現實政治不講，專在考據古經典上作工夫，與自己身世渺不相涉，那豈得謂是經學？這一個大問題，諸位讀我《近三百年學術史》便知。我說清代下面的今文學家主張經世致用，就從章實齋六經皆史論衍出，故從章實齋接下到龔定庵，這一層，從來沒有人這樣講。今天我也不再詳細講，但將慢慢兒向下專講他的史學方面。</p>
+<p>章實齋所謂六經皆史之「史」字，近人只有王國維有篇文章叫〈釋史〉，闡發甚是。王國維說史字篆文作「」，上面「」是一枝筆，下面「」是一隻手，一隻手裡拿著一枝筆，就是個書記。只有王國維這樣講法，纔講正了章實齋「六經皆史」的「史」字。所以諸位要讀書，我告訴諸位一句話，首要在真讀本書，不要追隨時代，人云亦云。胡適之怎麼講、梁任公怎麼講，這是時代聞人。追隨時代聞人，那是時代風氣。章實齋勸人做學問，即千萬教人不要追隨時代風氣。在章實齋那時的時代風氣便是講經學。如惠定宇、戴東原在經學上的一些考據、訓詁，依章實齋意見說來，這不算是經學。他說古代真經學都是王官之學，主要在衙門裡實際政治上，故說六經皆史。今天諸位講史學，也還是空言。諸位研究史學，而絕對與現實政治、外交、國家、社會、民生沒有絲毫關係，只在書本上去找材料來拼湊，認為那就是史學了，章實齋就要反對這一層。章實齋時代的風氣和今天我們的時代風氣又不同，但為學不該追隨時代風氣則總一樣。然則章實齋又如何告訴我們做學問究該從何處做起呢？他說學問應該從自己性情上做起。他又說，他的學問從浙東從王學來，王學就是講自己性情的，講我心之所好。他又說：他年輕時先生教他讀訓詁、考據書，他都不喜歡。待他讀到史學，就喜歡。任何人做學問，都該要在自己性情上有自得，這就開了我們學問之門，不要在外面追摹時代風氣。我想對章學誠的史學暫緩不講，只就這一番話，便可做我們的教訓。其實每個時代都一樣，這一層，我在《近三百年學術史》裡曾詳細發揮過。在他以前，人多講經學，在他以後，像是沒有人來講史學，仍還講經學，然而講法不同了，就講出了龔定庵這許多人來。但是愈講愈壞，講出了康有為的《新學偽經考》。那時的今文學派，便是考據經學走上了絕路，但這是另外一件事。</p>
+<p>以上是我講他關於「六經皆史」的理論，下面將對章實齋史學方面多講幾句。在我的《近三百年學術史》裡，則注重在他反經學方面、反時代方面講，我在那書裡並不是要提倡講某一種學問，只在近三百年學術史這條路上指出其趨勢與缺點，自然該和我現在所講有不同。好了，我們今天只講到這裡。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="黃梨洲的明儒學案、全謝山的宋元學案.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="章實齋文史通義.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="黃梨洲的明儒學案、全謝山的宋元學案.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="章實齋文史通義.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

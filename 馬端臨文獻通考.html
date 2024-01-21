@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>馬端臨文獻通考 - Mdbook Template</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="弁言.html">弁言</a></li><li class="chapter-item expanded affix "><li class="part-title">通覽</li><li class="chapter-item expanded "><a href="中國史學名著.html"><strong aria-hidden="true">1.</strong> 中國史學名著</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="尚書.html"><strong aria-hidden="true">1.1.</strong> 尚書</a></li><li class="chapter-item expanded "><a href="春秋.html"><strong aria-hidden="true">1.2.</strong> 春秋</a></li><li class="chapter-item expanded "><a href="春秋三傳.html"><strong aria-hidden="true">1.3.</strong> 春秋三傳</a></li><li class="chapter-item expanded "><a href="左傳（附國語、國策）.html"><strong aria-hidden="true">1.4.</strong> 左傳（附國語、國策）</a></li><li class="chapter-item expanded "><a href="史記.html"><strong aria-hidden="true">1.5.</strong> 史記</a></li><li class="chapter-item expanded "><a href="漢書.html"><strong aria-hidden="true">1.6.</strong> 漢書</a></li><li class="chapter-item expanded "><a href="范曄後漢書和陳壽三國志.html"><strong aria-hidden="true">1.7.</strong> 范曄後漢書和陳壽三國志</a></li><li class="chapter-item expanded "><a href="綜論東漢到隋的史學演進.html"><strong aria-hidden="true">1.8.</strong> 綜論東漢到隋的史學演進</a></li><li class="chapter-item expanded "><a href="高僧傳、水經注、世說新語.html"><strong aria-hidden="true">1.9.</strong> 高僧傳、水經注、世說新語</a></li><li class="chapter-item expanded "><a href="劉知幾史通.html"><strong aria-hidden="true">1.10.</strong> 劉知幾史通</a></li><li class="chapter-item expanded "><a href="杜佑通典.html"><strong aria-hidden="true">1.11.</strong> 杜佑通典</a></li><li class="chapter-item expanded "><a href="歐陽脩新五代史與新唐書.html"><strong aria-hidden="true">1.12.</strong> 歐陽脩新五代史與新唐書</a></li><li class="chapter-item expanded "><a href="司馬光資治通鑑.html"><strong aria-hidden="true">1.13.</strong> 司馬光資治通鑑</a></li><li class="chapter-item expanded "><a href="朱子通鑑綱目與袁樞通鑑紀事本末.html"><strong aria-hidden="true">1.14.</strong> 朱子通鑑綱目與袁樞通鑑紀事本末</a></li><li class="chapter-item expanded "><a href="鄭樵通志.html"><strong aria-hidden="true">1.15.</strong> 鄭樵通志</a></li><li class="chapter-item expanded "><a href="馬端臨文獻通考.html" class="active"><strong aria-hidden="true">1.16.</strong> 馬端臨文獻通考</a></li><li class="chapter-item expanded "><a href="黃梨洲的明儒學案、全謝山的宋元學案.html"><strong aria-hidden="true">1.17.</strong> 黃梨洲的明儒學案、全謝山的宋元學案</a></li><li class="chapter-item expanded "><a href="從黃全兩學案講到章實齋文史通義.html"><strong aria-hidden="true">1.18.</strong> 從黃全兩學案講到章實齋文史通義</a></li><li class="chapter-item expanded "><a href="章實齋文史通義.html"><strong aria-hidden="true">1.19.</strong> 章實齋文史通義</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">天漢春秋</li><li class="chapter-item expanded affix "><li class="part-title">核心問題</li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Mdbook Template</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="馬端臨文獻通考"><a class="header" href="#馬端臨文獻通考">馬端臨文獻通考</a></h1>
+<p>今天講馬端臨（貴與）的《文獻通考》。我們講過杜佑《通典》、鄭樵《通志》，《文獻通考》就是中國所謂「三通」的最後第三部。馬端臨已是元朝人，但宋是亡了，國家傳統斬絕，而學術還未中斷。所以元初很有幾個大學者，如王應麟，寫《玉海》、《困學紀聞》，胡三省寫《通鑑注》，稍前尚有黃東發寫《黃氏日鈔》，這些都是宋元之際的大儒，對史學都有極高成就。馬端臨也還可算是其中一個，其人其書雖稍晚，我們也可把來看作是宋代的史學，還是宋代史學的後勁。</p>
+<p>我們且講此書為何取名《文獻》？他在自己〈序〉裡就講了：文，典籍也；獻，賢者也。他說：「敘事本之經史，參以歷代會要及百家傳記之書。」所謂文，即指這些。最主要的，當然就是六經和十七史。歷代會要是講求政治制度方面的重要參考，如《唐會要》、《五代會要》、《宋會要》，還有後人補集的《兩漢會要》等，然後及於百家傳記之書，此皆所謂「文」。凡馬氏書之記載，主要根據這些材料。在記載之外，還附帶有評論，則先取「當時臣僚之奏疏，次及近代諸家之評論」，「以至於名流之燕談、稗官之記錄」，此即所謂獻。每項制度，以及每一種措施，在當時實際從政的人，他們所有意見，則都見之奏疏。我們當知，每一時代所發生的事，固甚重要，而每一時代人對於此等事所發生之意見，亦同樣重要。只是後人對前代事所發生之評論，不僅著在文章，亦有燕閒間之談論，而記錄在各種小說筆記上的。此等皆所謂獻。</p>
+<p>所以「文」與「獻」是兩件事。簡單講，「文」是指書本，「獻」是指人物。我們當知，做學問，書本固重要，人物也重要，或許人物要重要過書本。我曾再三告訴過諸位，讀書要一部一部書的讀，並要讀到這部書背後寫書的這個人。這個人比這部書，我們更應該要注意到。而且在我以前，長時期內，許多別人讀這部書的，我們也應該注意到。書本寫下，這是一部死的，而寫這書本的人物，才是一個活的。但活的人則藉這死的書而傳下。所以做學問，應該文獻並重。這「文獻」二字，最早見於《論語》。孔子講過：「夏禮，吾能言之，杞不足徵也；殷禮，吾能言之，宋不足徵也。文獻不足故也。」《論語》裡又有一段說：「文、武之道，未墜於地，在人。賢者識其大者，不賢者識其小者。」這裡的「賢者」就是指的人物。在每一個社會上，有些是大賢，他能懂得傳統大道。也有些不賢的人，那就是指的普通人，也必有傳統大道留在他們身上，只不過是傳統大道中比較小的地方而已。上引《論語》前一章所講「文獻不足」的獻字，就是指的識其大者的「賢人」。在孔子所講的文武之道，乃及講到夏禮、殷禮，把我們今天的話來講，也可說就是我們所謂的文化。孔子說：商代的文化，我能知道，可是沒有材料來證明我的講法。因為商代遺下的宋國，已經是文獻不足了。夏代的文化，我也能知道，可是夏代遺下的杞國，也已是文獻不足了。所以也無從來證明我所要講的。只有周代的文化，到今天還是有書本、有人物，所以比較容易講。在我們一所大學裡面，要研究學術，一定要有兩個條件。一是圖書館，要藏有很多的書，這即是「文」。又一定要合理想的、標準的教授，這就是「獻」，無此兩項，便是「文獻」不足。如諸位要研究孔子的道理，當然要讀《論語》，《論語》就是「文」。或者讀《春秋》，《春秋》也是「文」。但僅此還不夠。尚有如左丘明、孟子，這許多人就是賢者，就是獻。要兼此二者，纔能懂得《論語》和《春秋》。我們若要學孔子的道理，讀《論語》，便該連帶去問問孟子。讀《春秋》，也應該連帶去問問左丘明。所以「文」與「獻」該相提並論，兩面俱到。若使我們只看重了「文」，不能看重到「獻」，那就如我今天所批評的說：這是一種故紙堆中的學問，又說這是讀死書，死讀書，不成學問。但若你碰到了一個大賢，得他指導，你就知在這故紙堆中，藏有精深的涵義，死書便變成了活學問，只要有人能講。今天有人說，我們要研究中國學問，怕要到外國去，如像日本、美國，在他們那裡，所藏中國書很多，但亦僅是一堆書而已。有書而無人，有「文」而「獻」不足。諸位到日本、到美國，也只是讀死書，沒有什麼了不得。又如我們今天在臺灣，論起書本來，也並不輸於到日本、美國去。小小的一個臺北市，有故宮博物院、有中央圖書館、有中央研究院、有臺大圖書館在那些處，除掉從前在北平，別處便不易找到這麼許多書。我們要從許多書中來研究中國的歷史文化，也該儘夠了。但諸位要知，還有一件重要的是先生。書要瞭解，書多了，要一個能指導我們入門的人。我們讀此等書，也該聽聽他的意見。我們不能坐井觀天，只是死讀書。諸位今天的時代，已經和我做小孩子的時代大不同。那時我們蹲在鄉下，小孩子讀書只苦「文」不足，書很難得，然而尚有「賢者」，他們能講些中國東西給我們聽。今天諸位「文」是足夠了，要書本，省力得多。然而在今天中國的社會上，其實也像去日本、美國一般，真個要有幾個中國的老師宿儒能講中國東西的，可是不多了。有文無獻，那就只能讀死書，死讀書，就不免倍加喫力了。</p>
+<p>那麼，正如諸位要研究孔子，便該從先秦孟子、荀子一路下來，歷漢唐到宋、元、明，直到清代，從來研究孔子的人有多少，這許多人所講也即都是「獻」，但積久了，所謂獻的，也都成了文。在我們現代，又要來找一個也能像孟子、荀子、朱子、陽明般一樣能講孔孟之道的，那就不易了。所以儘說有文化傳統，我們還得要一個活的「獻」，那纔是真傳統，僅在圖書館求是不夠的。圖書館究不是一個活東西，要有人物，要有學者，要有了「獻」，那「文」纔都發揮光華，都見精彩了。</p>
+<p>剛才我所講，是普泛的講到一般的做學問上面去。現在回到《文獻通考》這部書，是專注意在講政治制度的。如《論語》裡說「夏禮，吾能言之，……殷禮，吾能言之」這個「禮」字，廣義地講，就是「道」。也可說，就是當時的文化。狹義地講，就是當時的一些政治制度。我們要研究每一種的政治制度，不僅要研究這些寫在文字規定下來的所謂制度，還應該懂得在當時此一制度之起源，乃至此一制度之演變。並有許多人對於此一制度所發揮的種種意見和議論。這纔是研究到了一活制度。這也是我們研究一切學問都該懂得的。讀《文獻通考》，便該注意到此處。其實馬端臨的《文獻通考》此一著意之點，乃是跟隨杜佑的《通典》而來。我們已經講過杜佑《通典》，不僅講到每一種的制度，還詳細地講到對於某一制度經歷了各個時代的許多人的意見和評論。這是杜佑《通典》的極見精神處，而《文獻通考》則把此承襲了下來。我們今天，則似乎只看重這些寫定的書本，而更不看重這些寫書本和讀書本的人。從前人讀《論語》，必然會看重孔子，乃至先秦、兩漢、唐、宋、元、明、清歷來凡是講《論語》的人，都會同樣看重。今天最多是來講《論語》，而對於從先秦下迄清代這許多比我在前的講《論語》的，我都看不起。更可怕的，是只講《論語》，不講孔子。換言之，在我們心中，只有《論語》其書，更沒有孔子其人。亦如講歷史，講制度，也僅止於歷史制度而止。在我們講的人心中，實也沒有我們所講此歷史此制度下的許多人。這實在是我們做學問一個極大的心理上的病。在我們心理上有了這種病，我們便無法做一種高深的、博厚的學問。因在這個人的學問狀態上，已經有了一種不僅不謙虛，並且不厚道的大心病。對於這一本書，從前人用功這本書的，對於這一項制度，從前人注意這項制度的，他們的意見，我們全不理會。甚至於我們對於這一部著作，對於這一個制度的本身，我們也並不是用一個研究的態度來研究，而更主要的，是用一個批評的態度來批評。好像總要找到它一些毛病，纔表示出我讀書有得。若我不能找出它一些毛病來，豈不是在我一無所得嗎？這一種的觀點，實在是極大錯誤。而且我們常說，秦前是封建，秦後是專制，早把中國歷史上一應制度批評淨盡，則杜、馬兩書宜可擱置不理了。</p>
+<p>我隨便題外講幾句話。最近有一位政治大學的學生寫信來，說要討我一本講老莊的書。他說：他做學問，最喜歡先秦諸子，想讀老莊的書。我復信說，我並沒有這本書，且你為什麼很注重老莊，而不看重《論》、《孟》呢？我有寫的《論語新解》一書，你見過沒有？我只是隨便這樣寫了作復。他再來信，我才知道他已是大學畢業，在哪裡不知讀碩士還是讀博士，他說《論語》、《孟子》，照現在社會風氣，不許我們自由批評，便不能作論文，那種書還有什麼可研究的？可見他所謂的「研究」，主要是要作批評。今天大家正在講復興文化，要講孔子、孟子，要提倡，不要批評，他就覺得這種書不值得研究。我不過隨便舉一例，怕絕不只一人這樣想，做學問就要能批評。但據我的想法，做學問總該要瞭解。即不講瞭解，也該能「記得」。所謂「賢者識其大，不賢者識其小」，「識」字讀如「志」，便是記得，記在心裡。所記的也有大，也有小，但總該先能記，再能知。記得了，知道了，不能批評也不妨事。沒有知，儘求批評，批評過，也就放一旁，不再記得了，那豈成為學問。這因講《文獻通考》，為解釋這「文獻」二字而講這許多話，其實這許多話也不能算是題外之言，在讀書做學問上是很有關係的。</p>
+<p>馬端臨的《文獻通考》，共有三百四十八卷，分二十四門。〈田賦〉、〈錢幣〉、〈戶口〉、〈職役〉、〈征榷〉、〈市糶〉、〈土貢〉、〈國用〉、〈選舉〉、〈學校〉、〈職官〉、〈郊社〉、〈宗廟〉、〈王禮〉、〈樂〉、〈兵〉、〈刑〉，十七門，馬端臨自己說，都是根據杜佑《通典》。〈田賦〉、〈錢幣〉、〈戶口〉、〈職役〉、〈征榷〉、〈市糶〉、〈土貢〉、〈國用〉，是杜佑《通典》裡的〈食貨典〉。〈選舉〉、〈學校〉是《通典》裡的〈選舉典〉。〈職官〉以下，〈郊社〉、〈宗廟〉、〈王禮〉就是《通典》裡的〈禮典〉。但《通典．禮典》有一百卷，《通考》只有數十卷。這十七門以外，還有〈輿地〉、〈四裔〉兩門，其十九門，都是根據杜佑。此外另有〈經籍〉、〈帝系〉、〈封建〉、〈象緯〉、〈物異〉幾門，不是杜佑《通典》裡所有，乃是採摭了另外的書所成。在他自寫的〈序〉上，只推尊杜佑《通典》，但並沒有講到鄭樵的《通志》。但《通考》裡的〈經籍典〉，此非杜佑所有，也不是講的政治制度。鄭樵二十〈略〉，本是超乎政治制度之外的，如〈氏族略〉、〈六書略〉等，皆與政治制度不相干。鄭樵講歷史，已把範圍擴大，可說是一個文化史的範圍，而不僅是一個制度史的範圍了。現在馬端臨的《文獻通考》，他是純粹根據了杜佑《通典》，看重制度，那麼像〈經籍志〉之類，就不需放在裡邊。我們也明知他的〈經籍考〉是根據鄭樵的〈藝文〉、〈校讎〉兩略而來，在他的《文獻通考》裡，二十四門，每一門有一篇〈小序〉，全書有一個〈總序〉。在他〈輿地考〉的〈序〉上，就特別引到鄭樵，很稱讚鄭樵的意見，認為講輿地應該講山川，講自然地理，不應該講郡國，講政治地理，這一番話，我以前已經講過，自然地理變化比較少，政治地理變化比較多，漢代一百零三個郡國，若只講山川，則並無大變，當時的地方行政區分，到唐代就完全變了。這兩方面，我們認為都需要講，只為鄭樵和馬端臨都拿一種通史的眼光來寫，所以看重在山川。若使照斷代史的體裁來寫，《漢書．地理志》分寫當時郡國，並不算錯。特別像馬端臨《通考》裡的〈象緯〉、〈物異〉，就等於鄭樵的〈天文略〉、〈五行略〉，而他又來個〈封建〉。「封建」也可說不失為一種制度，不僅秦以前有封建，秦以後也不斷有封建。漢有封建，唐亦有封建。這是馬端臨自己添進去的一門，為杜佑、鄭樵所沒有。他又有〈帝系〉一門，講歷史當然很要看重帝王系統，但不應該放在講制度的書裡面。父傳子，子傳孫，亦是一個制度。而某王下面是某王，這是歷史，與制度不相干。所以我們看他這二十四門，大體說來，實不能超出杜佑的九個門類之外去，當然也不能和鄭樵的二十〈略〉這樣有寬廣的角度，但後人卻特別喜歡讀馬端臨的《通考》，這也有幾個理由。第一，杜佑《通典》只到唐代中期，而馬端臨的《文獻通考》則直到宋末，年代長了。尤其在《通考》裡有很多材料乃《宋史》所沒有。元人編《宋史》編得並不好，而馬端臨在元代初年，他的《通考》所寫宋代制度，有很多材料為《宋史》所未收，這是人家看重他書的一點。而且他書中材料也比杜佑《通典》來得多。時代久了，材料又多了，所以後來的批評都說《通考》比起《通典》來，「簡嚴不足，詳贍過之」。其實杜佑《通典》，並不是「簡嚴」二字可盡，這我在講杜佑《通典》時已經講過。他的九門類之先後排列，便見有一份極深的對於政治制度的一種意見，先〈食貨〉，再〈選舉〉，而後〈職官〉，這等見解，便是非常高明。至於《通典》也有不如《通考》的，如《通典》裡講「兵」，只根據《孫子兵法》，引用歷代軍事來證明《孫子兵法》裡的話，那就不是個制度。如說我們每一人幾歲應當兵，幾歲可以退役，漢代的兵制和唐代的兵制各怎樣，宋代改成了募兵制又怎樣，這許多，馬端臨的《文獻通考》是遠在杜佑《通典》之上了。我們另外從一點講，杜佑《通典》最後一門是〈邊防〉，國家的國防，也成一個制度，國防的對象則是外面的四裔，《通典》很看重國防問題，而《通考》卻把〈邊防〉改成了〈四裔〉。當然我們講歷史，也該知道北宋時的遼國和西夏，和後來的金國各怎樣，這纔所謂是「四裔」，但我們的書是講制度，不是講一般的歷史，與其注重在四裔，不如注重在邊防。像這種地方，我們就見得讀杜佑《通典》，確可長進我們的知識，至少可以刺激我們，或者暗示我們以一種政治上的理論和意見。他書中九個門類，把他的全部政治意見，輕重先後，全都放在裡面了，而我們讀馬端臨的《文獻通考》，就不免要感到其意義不精，僅是增添了材料，而不見其精義所在。</p>
+<p>清末，阮元提倡讀兩部書：一是《資治通鑑》，一是《文獻通考》。讀了《通鑑》，才知道歷代的歷史，讀了《通考》，才知道歷代的制度，這兩部書，阮元稱之曰「二通」。本來是《通典》、《通志》、《通考》為「三通」，阮元改稱「二通」，也是別有用意。到了曾國藩，編《經史百家雜鈔》第二類〈敘跋〉，就把馬貴與《文獻通考》的二十四篇〈序〉，一篇篇都收進去，可見當時人之看重此書。所以此後的學者幾乎大家都要一讀《通考》這二十四門的〈序〉，約略對於這一門古今上下的變化得失，可以知道一點簡單的情形。如《通考》第一門〈田賦〉，古今田賦是怎麼一回事，在它中間大的得失何在，在這〈序〉裡大概都有講到，這就變成我們一個讀書人的一種普通常識。諸位當知，以前的讀書人，他僅是從事於科舉的不算，若真是讀書，他們的常識卻很淵博。並不是說專要學歷史裡面的制度，可是馬端臨的《文獻通考》，總要翻一翻。就算是不翻，這二十四篇〈序〉也都會讀的。即如說曾國藩，他不是一個史學家，更不是在那裡專研究歷代制度，然而在他的《經史百家雜鈔》裡，就把這二十四篇〈序〉都抄了進去。他的《經史百家雜鈔》，當然為後來讀書人所看重，所以到清代末年，一般讀書人還多讀一些中國舊的政治制度，知道一大概。自從光緒時代變法維新下到後來辛亥革命，卻把從前舊的完全不知道了，都廢掉了。直到今天，我們可以說，在我們政府上下從政做官的人，懂得外國制度的可能還有，懂得中國傳統制度的，儘可說已沒有。就是在我們大學法學院政治系，研究西方政治制度的，這是一門正式的課程。研究中國政治制度的，那就很少了。如此般把我們中國舊的以往歷史一刀橫切，腰斬了，下面一切從頭做起，其實是從頭摹倣人家。這總是在我們歷史文化的生命上一個莫大的病痛。我們本是一個五千年歷史文化綿長的大國，現在則是一個不到百年的新國。今天我們也可以說，關於講中國歷史裡面的傳統政治制度，真是「文有餘」。接著三通有九通、十通，還有列朝的會典、奏議及其他的書，材料是汗牛充棟。但我們的傳統制度，多含有甚深精義，絕非封建專制兩語可盡。今日所苦，實苦於「獻不足」，現在已經沒有人懂得了。若講新的，則更是文獻兩不足，只有仰賴別人。</p>
+<p>有一天，有兩位青年來問我，他們拿了一本我寫的《中國歷史研究法》，因我在此書中說：我們應該對於自己的傳統政治制度，有人能來好好寫一概略，介紹給大家。他們來問，怎麼叫傳統政治制度，並說他們正想要來寫一部這樣的書。我問他們在大學讀什麼系，一位是新聞系，一位記不清，他們似乎沒有讀過中國舊書，不知其中困難，所以要來寫《中國政治制度史》。但這總算有志。此外，根本沒有人來理會。讓我且講從前人如何來研究政治制度。杜佑是唐代一宰相，馬端臨在宋亡入元，沒有在政治上涉足，但他的父親也是宋末做過宰相的。一個普通的讀書人，不一定就懂得政治，要懂政治，應該另有一合適環境。這是照一般人講法。當然也有傑出的人，我們可不論。簡單的講，如漢代開國以平民為天子，漢高祖手下許多開國功臣，都來自田間，有些是十足的鄉下佬，這在中國歷史上可算極了不得，很少有。他們也能治天下，居然能使天下太平下來。到後來，慢慢兒有董仲舒等許多人來提倡儒學。其實當時的太學教的課，也只教一經，或《尚書》、或《詩經》、或《春秋》。教書的博士，固然不一定只通一經，但他們只教一經。十八歲就可入學當學生，二十歲就畢業，便回到他們自己地方去做一個「吏」，要他在實際的政治事務上磨練，將來再選舉到中央。漢代人常說「通經致用」，所謂通經，也只通得其大義，一部經兩年功夫能懂得多少？然而他那一點大綱領是懂得了，便可以致用，這真是了不得。漢代的政治人才便是這樣子來的，而漢代的吏治，亦最為後世所推。唐代人接著南北朝下來，在南北朝時的中國，是一個大門第的社會。在那大門第的傳統下，世世相傳，都高踞政治地位，連他們的親戚也如此。所以一個門第中的子弟，容易懂得政治。不僅懂得政治現況，更懂得政治傳統。所謂「王氏青箱」，乃是把數十百年的政府檔案藏著一箱，傳給子孫。所以政治上的事情，他們都懂。唐代一般普通的知識分子修習文學，可以應考試。又學佛學，預備將來退休。但其間有不少門第家傳，使他們了解得政治。所以唐代人在政治上顯出很大的才能，有極能幹的宰相，乃至其他各門的人物。</p>
+<p>到了宋代，自唐末五代下來，大門第都衰了，沒有了，民間只就科舉制度考試，而跑上政治，實際都是外行。直要到范仲淹等起來，范仲淹「為秀才時，即以天下為己任」，「先天下之憂而憂，後天下之樂而樂」，開出了宋代的士風，此下的學者都是以學問來從事政治的，與漢代人不同。漢代人的政治知識和才能，乃是先從下層的地方政治磨練出來。當然不是說他們不讀書。唐人考進士，僅通一點文學、詩賦，又喜歡研究佛學，政治上的知識，乃從門第中來。到了門第衰落，政治也就完了。所以唐代人像是不講經學、史學，但他們實際上有一套學問，可以來在政治上貢獻，杜佑就是一個。到了宋代，門第沒有了，都是一輩讀書人自己立志要改好這時代。然而漢代的讀書人和唐代的讀書人乃至宋代的讀書人，顯然各不同。真是要憑學問來跑上政治的，比較是宋代人更如此。所以宋人在政治上多理想、議論，不如唐代人有一種實際的事功。不論是王荊公也好，司馬溫公也好，都是書生從政，他們同樣是理論多、思想多，而未必能配合上實際。在此一點上，遠不如漢、唐，能和實際相配合。漢人是從郡縣做吏磨練出來，唐人是在大門第傳統下薰陶出來，而宋人則是由民間在學術上露頭角。</p>
+<p>宋人講學問也可分成兩派：一派像王荊公，他是經學一派。像司馬溫公，他是史學。經學可說是等於孟子之所謂「法先王」，史學派可說是等於荀子之所謂「法後王」。經學派總是偏重理想、多議論，王荊公就是這樣一個人。史學派重實際、重經驗，司馬溫公就是這樣一個人。也可說經學家常看重制度，要擺出一大套來，因為他喜歡理論，而史學家則多重人事，人事和制度是兩回事。像司馬溫公，在制度方面看他便像無多主張。他寫的《資治通鑑》，就是一部偏重人事的書，不像杜佑《通典》，是一部偏重制度的書。我們也可說宋朝人學問所以和唐朝人不同，而也各有得失。</p>
+<p>到了後來，元代不用講，明朝呢？其實明朝人已經都談不上，明朝人都是空疏的。尤其到後來的理學家們，更見空疏。我們也可說，真是一個大理學家，則無有不通經、不通史。明代的理學，乃是變成了一種非經學、非史學，而另外來一套。這正等於今天我們講「思想」只講思想，似乎可以不要學問。或者稱之為「哲學」，在西方有哲學這一套，在中國這一套比較少。只有理學，其流弊則是空疏不學。因此在明代，經學也衰，史學也衰，政治上也沒有大表現。直要到明末，才再有「經世大儒」出來。他們講制度、講歷史、講經學、講文化。然而在那時，已是清人入主，滿洲異族來管中國，文字獄大興，一般人做學問的慢慢兒變，到了乾嘉時代，就都變到訓詁、考據，「故紙堆中」去。訓詁、考據，便是在一堆材料裡邊做學問。我剛才說的，學問要同人配合，所謂「文獻」。這種學問，修身、齊家、治國、平天下，都得「活學活用」。清代乾嘉之學就不是這種學問了，那時也還是「獻不足而文有餘」。直要到了清代末年民國以來，那就是所謂「學絕道喪」，都沒有了。</p>
+<p>譬如說吧，一個政府，在裡邊可以代表學者的人是最少數，政治不從學術出身，而從黨的訓練出身。若說學術人才經考試院考來，他們的分發，等於如從前做一個「吏」，這是有的，但就很少從考試院出來而在政治上變成一個高地位的。民國六十年以來我們的政治上可以分成兩種人：一種是黨裡邊來的，一種人是外國留學生，英國、美國、法國、日本都有。我們的政治，就擺在這個基礎上，這可以說和向來歷史傳統上的基礎是不同了。</p>
+<p>我們做學問，就要懂得以前人怎麼做，我們現在又怎麼做。我們要講政治，也要懂得以前我們的傳統政治是怎麼樣，今天我們的政治又是怎麼樣。若要講到社會，也要懂得以前的中國社會是怎麼樣，今天我們的社會又是怎麼樣。諸位在臺北市，無論在學校、在街上，或者跑回家，懂得這個是中國社會，固不錯。然而是今天的中國社會，同幾十年前的中國社會大不同。我試舉個例。六、七十年前，我小孩子時，很少有女人在家裡打麻雀。打麻雀是有了，但很少女人打。西方文化傳來，女人解放，女孩子多去學校讀書，但讀書後做事的還是極少數。在家裡沒有事，不教小孩，不管家務，只得打牌。現在我們十個家庭，總有五個家庭的老太太、太太，甚至於小姐們，都迷醉在打牌。這真是時代不同，社會也不同了。如說諸位在國內大學畢業，要找個職業相當困難，若在外國要找職業，便省力了。留學生，到了暑假到一個旅館裡當個茶房，到一個小飲食店裡做個洗盤洗碗的，三個月賺一點錢，再回到學校裡讀書，大家不以為奇。若使諸位在國內，說現在暑假了，也跑到一個觀光飯店去端菜，做一、兩個月吧，這不能，這就是社會不同。我們像是有一個身分，外國社會沒有這身分。又如美國，家庭用女工的絕少，一百家中很少有一、兩家用工人，和我們絕不相同。我們要從小地方看，大地方更應該看。要懂得今天的中國社會同百年前的大不相同。做學問定要從這種地方著眼。但一百年前何從著眼呢？那麼我們至少要讀書。如我今天講《文獻通考》，直從古代唐、虞、夏、商、周一路到宋代末年，田賦怎麼樣，學校怎麼樣，清清楚楚，講得很詳在那裡，讀之自會長見識。只讀一部書，就長了我們的見識了。但我們今天則一筆抹殺，說中國古代，都只是一個封建社會，一套專制政治，全要不得，一口氣罵倒了，沒有了。但不是沒有了中國的古代，卻是沒有了我們各自的聰明和知識。沒有聰明而去學外國，縱是深通英、法、德文，在外國住下十年、二十年，但沒有親身在外國政治圈子裡做事，也恐不會深懂得外國的政治。講到中國古人，漢唐兩代人比較懂政治，宋人不懂政治，為什麼？因其沒有經驗。諸位要懂政治，而條件不合。當然，喜歡研究歷史，喜歡研究傳統制度，也可懂一點。但跑進政治去，或許要出毛病，像王荊公便是一例。我們現在，舊的一切不要，新的呢？我請問：哪一人是在西方大學確實研究了政治？這已很少很少。更何人具備了西方政治的真實經驗？我們今天真是所謂「不學無術」，沒有一條路。至少諸位研究史學，要懂得拿舊歷史給人看，中國不是一個封建社會，也不是一個專制政體，至少不要讓我們隨意開口罵。又如講王荊公、司馬溫公，也不應該儘講思想理論，總該懂得一些他們的政治實情。外國社會同中國不同，外國傳統也和中國不同。又懂中國又懂外國，不是不能有這樣的人，將來總該有。我們不希望站在政治上層、學術上層的，永遠是到了外國去回來罵中國人，先也希望有幾個能為中國辯護的人。你說中國是一套專制政治，我說不是。這當然僅是「抱殘守闕」，然這個殘和闕，還須有人抱和守。宋朝亡了，元朝來了，還是有像馬端臨那樣寫他三百幾十卷的大書。直到今天，這部書還是中國一部有價值的大書。杜佑是在唐的全盛時代，鄭樵已在南宋岌岌可危的時代了，但也能有表現。而馬端臨則是在亡國之餘，而能表現出他不朽的名著，更是難得。從另一方面講，杜佑本人是個宰相，馬端臨父親也是個宰相，至於鄭樵則是在鄉間一老儒。但鄭樵所講在傳統制度方面，實不如杜、馬兩人講得好。《通志》所長，乃是在〈氏族〉、〈六書〉、〈藝文〉、〈校讎〉諸略。可見講政治，最好還得與政治有實緣。中國歷史有一個士人政權的大傳統，所以能有像《通典》、《通考》那樣專講政治制度而又講得這樣好的書。諸位試去找外國史籍，絕對找不出同樣如此偉大的書來。這個事實，應可證明些什麼？諸位試加思索。我今天講到這裡。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="鄭樵通志.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="黃梨洲的明儒學案、全謝山的宋元學案.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="鄭樵通志.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="黃梨洲的明儒學案、全謝山的宋元學案.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>高僧傳、水經注、世說新語 - Mdbook Template</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="弁言.html">弁言</a></li><li class="chapter-item expanded affix "><li class="part-title">通覽</li><li class="chapter-item expanded "><a href="中國史學名著.html"><strong aria-hidden="true">1.</strong> 中國史學名著</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="尚書.html"><strong aria-hidden="true">1.1.</strong> 尚書</a></li><li class="chapter-item expanded "><a href="春秋.html"><strong aria-hidden="true">1.2.</strong> 春秋</a></li><li class="chapter-item expanded "><a href="春秋三傳.html"><strong aria-hidden="true">1.3.</strong> 春秋三傳</a></li><li class="chapter-item expanded "><a href="左傳（附國語、國策）.html"><strong aria-hidden="true">1.4.</strong> 左傳（附國語、國策）</a></li><li class="chapter-item expanded "><a href="史記.html"><strong aria-hidden="true">1.5.</strong> 史記</a></li><li class="chapter-item expanded "><a href="漢書.html"><strong aria-hidden="true">1.6.</strong> 漢書</a></li><li class="chapter-item expanded "><a href="范曄後漢書和陳壽三國志.html"><strong aria-hidden="true">1.7.</strong> 范曄後漢書和陳壽三國志</a></li><li class="chapter-item expanded "><a href="綜論東漢到隋的史學演進.html"><strong aria-hidden="true">1.8.</strong> 綜論東漢到隋的史學演進</a></li><li class="chapter-item expanded "><a href="高僧傳、水經注、世說新語.html" class="active"><strong aria-hidden="true">1.9.</strong> 高僧傳、水經注、世說新語</a></li><li class="chapter-item expanded "><a href="劉知幾史通.html"><strong aria-hidden="true">1.10.</strong> 劉知幾史通</a></li><li class="chapter-item expanded "><a href="杜佑通典.html"><strong aria-hidden="true">1.11.</strong> 杜佑通典</a></li><li class="chapter-item expanded "><a href="歐陽脩新五代史與新唐書.html"><strong aria-hidden="true">1.12.</strong> 歐陽脩新五代史與新唐書</a></li><li class="chapter-item expanded "><a href="司馬光資治通鑑.html"><strong aria-hidden="true">1.13.</strong> 司馬光資治通鑑</a></li><li class="chapter-item expanded "><a href="朱子通鑑綱目與袁樞通鑑紀事本末.html"><strong aria-hidden="true">1.14.</strong> 朱子通鑑綱目與袁樞通鑑紀事本末</a></li><li class="chapter-item expanded "><a href="鄭樵通志.html"><strong aria-hidden="true">1.15.</strong> 鄭樵通志</a></li><li class="chapter-item expanded "><a href="馬端臨文獻通考.html"><strong aria-hidden="true">1.16.</strong> 馬端臨文獻通考</a></li><li class="chapter-item expanded "><a href="黃梨洲的明儒學案、全謝山的宋元學案.html"><strong aria-hidden="true">1.17.</strong> 黃梨洲的明儒學案、全謝山的宋元學案</a></li><li class="chapter-item expanded "><a href="從黃全兩學案講到章實齋文史通義.html"><strong aria-hidden="true">1.18.</strong> 從黃全兩學案講到章實齋文史通義</a></li><li class="chapter-item expanded "><a href="章實齋文史通義.html"><strong aria-hidden="true">1.19.</strong> 章實齋文史通義</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">天漢春秋</li><li class="chapter-item expanded affix "><li class="part-title">核心問題</li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Mdbook Template</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="高僧傳水經注世說新語"><a class="header" href="#高僧傳水經注世說新語">高僧傳、水經注、世說新語</a></h1>
+<p>我們今天續講東漢以下到隋代之史學演進。我在上一堂特別提出「雜傳」、「地理」兩類的重要性，今天我想在這兩類中每一類舉出一書略為講述。《隋書．經籍志》裡許多書，現在失傳的多，但保留下來的也還不少。我將在中間特別舉出兩部，略為一講。但並不是舉來作史學名著。但即稱之為史學中間的一部名著，也非不可。一是雜傳類裡的《高僧傳》；此書在《隋書．經籍志》裡稱為僧佑著，實際上該是慧皎著，慧皎是南朝梁人。此書共十四卷，講到了在四百五十三年中二百五十七位高僧，共分十類，一一為他們作傳。還有附見的二百三十九人，共可有六百僧人。除此《高僧傳》以外，《隋書．經籍志》裡還有別人所寫，如《名僧傳》等，可是只有此一部傳下。以後就有《續高僧傳》、再續三續的《高僧傳》，一路下來，為我們研究中國佛教史一項重要的史料。</p>
+<p>除《高僧傳》以外，又有《傳燈錄》，此是記載禪宗祖師們言行的，這樣我們可說中國已有了極詳細的佛教史材料。諸位當知，宗教家不看重歷史，特別是佛教，它本身就沒有歷史，連印度也沒有歷史，但佛教傳達中國，中國僧人就把中國文化傳統──看重歷史的眼光，來記載佛教史。即論世界各大宗教，有精詳的歷史記載的，也就是中國佛教了。但把歷史來記載宗教，這情形就會和原來的宗教發生很大差異。宗教本身不看重歷史，今把一代代的教主，和下面很多其他傳教的人，分著年代，再分著門類，詳細把事情記下，把歷史意義加進去，至少其本身宗教觀念，會因此而開明得多，就會變成一種新觀念，不啻在宗教裡開闢了一個新天地。因此下面才有所謂中國佛學之產生，此即佛教之中國化，乃是說在宗教裡邊加進了中國文化傳統中的人文歷史觀點，那是一件了不起的事。諸位研究歷史，定要求其全，又求其通。如講魏晉南北朝到隋這一段的歷史，斷不能把佛教排斥在外，置之不論。在這段歷史裡，從東漢末年佛教傳入，一天天的發展、變化，中間究是怎麼一回事？我們該從整個歷史來看，也該以全部佛教之演進來看。研究史學的人，只要在這個時代發生過了什麼事，都要求其全，求其通，從時代來看宗教，從宗教來看時代，時代變，宗教也跟著變，宗教變，似乎也是這個時代在變。像此之類，諸位要研究思想史社會史文化史等，都不能把佛教放在門外邊。佛教在當時，是社會上一個重大的宗教，它有一套信仰、有一套作為，時代固是影響著宗教，宗教也在那裡影響時代，中國的正史是紀傳體，包容不了宗教，宗教還是在外邊，我們只有在正史以外再來找宗教史，如像《高僧傳》，便甚有價值。在史學上，宗教上，都有極大貢獻。我們即使不研究佛教，但佛教要之是歷史中一大部門，將來到了唐以後，一路有佛教，歷代《高僧傳》便是佛學史上一寶庫。諸位千萬不能忽略。我們不能抱一種關門孤立主義，把此等重要事項置之度外。</p>
+<p>現在再講第十一類，地理方面，我在此方面一百三十九部書裡邊，也特別舉出一部，就是酈道元的《水經注》。漢代桑欽著《水經》，酈道元為之作注，特別是史學方面的注，本在魏晉南北朝很盛行。我們已經講過裴松之的《三國志注》，再有大家知道的，如李善的《文選注》，像酈道元的《水經注》，再有就是下邊要講的劉孝標的《世說新語注》，可說是當時四部有名的史注。桑欽《水經》本是薄薄的一小本，經酈道元一注，變成了一部大書。後人把《水經》本文和《注》放在一塊，實際上就是讀《水經》的《注》。等於我們把《左傳》、《公羊傳》、《穀梁傳》附在《春秋》下，很少人去掉三傳，專來讀《春秋》的。《水經注》照理是一部地理書，《隋書．經籍志》也就放在地理類。書中多講水道交通、農業灌溉，特別注意到水利。但漢代桑欽作了《水經》，經過幾百年到酈道元，他親自到過好多地方，來為《水經》作注，諸位當知，水道是會變的，原來這條水這樣流，後來這條水換了方向不是這樣流了。原來這條水經過這裡，後來經過那裡了。原來兩條水分的，後來合了。原來兩條水合的，後來分了。原來有這條水，後來沒有了，乾涸了。原來沒有這條水，後來新成一條水了。中國最初重要地區都在黃河流域，到了南北朝，長江流域慢慢兒開發，隋唐統一以後，就慢慢兒南方重過於北方。我在《國史大綱》裡有一篇〈中國南北經濟的變遷〉，由於經濟變遷就影響文化變遷，而同時重要的也就是水道交通等各方面的變遷。我們講地理的沿革，多注重在地名都邑等，而酈道元的《水經注》卻是拿水道交通為主，都邑附見在水道的旁邊。又把這些都邑曾經發生了些什麼事也一併記下。</p>
+<p>在地方曾發生過什麼事，那是歷史。所以酈道元的這部《水經注》，固然是一部地理書，實際是一部極有價值的歷史書。我們要講中國古史的水上交通、物產、文化種種變遷，這部書關係非常之大，值得參考。</p>
+<p>可是後來人不一定清楚這書的價值，而這書描寫各地風土景色，描寫得非常好。唐代柳宗元的文章，最受人歡迎的在其山水遊記方面，如〈永州八記〉之類，大家說柳宗元這一類的文章就是學著《水經注》，於是《水經注》就變成為文學家所注意的一部書。再後來，這書屢經傳抄，變成經注混淆，桑欽的《經》同酈道元的《注》慢慢分別不清。直到明代，那時並沒有一部很好《水經注》的版本，清代人就花著工夫來重訂《水經注》的文字。其首先特別重要的是為《經》《注》作分別，在此方面特別有貢獻的是戴東原。他為四庫全書館校《水經注》，說是根據《永樂大典》，那時《永樂大典》藏在內廷，非外面人可見。但在戴東原同時稍前，也曾有人用功校過《水經注》，主要是趙東潛。他的書也送進四庫館，後來人見戴東原所校，有許多和趙東潛相似，於是疑心戴抄了趙，這就成為當時學術界一大問題。戴東原有一弟子段玉裁，他特為戴東原辯護，寫了許多文字都收在段的集子裡。但這一問題，直從乾嘉時代一路下來沒有解決。到清末，《永樂大典》流傳到外面，經王國維看見了《大典》中半部《水經注》，拿來校戴東原所校的《水經注》，一點也不對。原來《永樂大典》本的《水經注》完全仍是舊的，《經》《注》不分，由此可見戴東原實是說了謊。但王國維只校了前半部，後來商務印書館訪求得整部《永樂大典》的《水經注》把來印出，兩面一對，顯然戴東原根本沒有根據《永樂大典》。我那時在北京大學教書，曾向商務印書館預約了一部《水經注》，等它出版，我想把此問題來作一研究。可是那年暑假我回到南方去，待秋間回到北平，晤見北大史學系同事孟森先生。他告訴我，他在暑假中做了一件大工作，把全部《水經注》都校了。他說：你此工作可不必做了。但可惜他的全部稿子沒有好好整理發表，接著是七七事變，而孟先生也過世了。但此下胡適之還要為戴東原抱不平，但《大典》本的《水經注》人人都看得到，戴東原是否根據《永樂大典》來校《水經注》，此問題極易解決，不煩多論，而且若使戴東原只是根據《永樂大典》來校《水經注》，這還有什麼大功績可言？大抵戴氏大功，是在其分辨《經》《注》，可是校《水經注》不僅此一點。戴東原在四庫館校《水經注》年月有限，他曾參考了趙東潛所校，而趙東潛的後人又看見了戴校四庫本，有許多或許為趙東潛校本所沒有，他們也把來加進去，於是這書有戴抄趙的，同時也有趙抄戴的。此刻倘能查出當初呈送四庫館的趙氏原本，此問題也可解決一部分。但我想此問題結論很簡單，已有了，也不必在此上更多操心。我寫《近三百年學術史》寫到戴東原，在小注裡就附帶提到這問題。後來我在香港，胡適之曾寫一信給我，說我和王靜安同樣未脫理學家習氣。我給他一回信說，此問題現在已都不值得講了，若得反共勝利回到大陸，你再高興看重這部《水經注》，不如組織一個考察團，這裡面應要有史學家、地理學家、水利學家、農業家、考古學家，各方面人物參加。雖然《水經注》中所記載的地方不能一一全去，幾條大水像黃河、淮水、渭水等都該去跑一周。原來這條水這樣流的，現在不這樣流了，原來這裡有這條水，現在沒有了，原來這裡是很繁盛的大都邑，現在荒廢得變成一個小村鎮或荒地了。這項工作，也像酈道元注《水經》那時，古今對照一下，可知其間有很大的變動。這事不僅為研究歷史，實對北方開發應有大用。何必專為戴東原一人斤斤辯誣。我自己對《水經注》，並未用過大工夫，只在我的《先秦諸子繫年》裡，引用了《水經注》的地方很多，尤其是在司馬貞《史記索隱》以外，酈道元《水經注》也曾引用《竹書紀年》的許多原始史料，對我有絕大的幫助。諸位今天若要讀《水經注》，可讀王先謙的《合校水經注》。在趙東潛同時，全祖望也曾七校《水經注》，後來他把那項工作讓給趙東潛去做了。胡適之曾有幾篇文章在抗戰時期零碎發表過，中間有一篇說，他的朋友丁山告訴他全祖望七校《水經注》靠不住，其實在王先謙《合校水經注》的〈例言〉裡就說過了，所以王氏合校全沒有引用全祖望。王先謙既已如此說了，何待再要胡先生的朋友丁山。可見和我同一時代的學術界，實在讀書粗心，已遠不能和我們稍前一代的人比了。</p>
+<p>現在再講第三部書，這不在《隋書．經籍志》的史部，而在子部小說類中，其實也應是一部史書，而且很重要，這就是劉義慶的《世說新語》。劉義慶是劉宋人，梁代劉孝標為它作注。據說從前劉向曾寫過一部《世說》，後來並無流傳，所以劉義慶的書稱作《世說新書》。後來又不曉得何人把此書名改成了《世說新語》。書裡都記著些當時人的佳事佳話，在社會上流傳的，而劉孝標的《注》，則採用了一百六十六家的書，這些書都在正史之外。後來劉知幾《史通》很不看重劉義慶此書，但很看重劉孝標的《注》。他說：「以峻之才識，足堪遠大，而不能探賾索隱，網羅班、馬，方復留情於委巷小說，銳思於流俗短書，可謂勞而無功，費而無當者矣。」他說劉孝標的學問識見，可以同班、馬一樣寫大歷史，他不做這工夫，乃留情於委巷小說，銳思於流俗短書，可見他很看不起劉義慶的書。然而此書連同劉孝標《注》直流傳到今天，由今看來，這是一部對當時歷史極有關係、有價值的書。重要是在能表現出當時的時代特性。每一時代同另一時代不同，正因其各有特性不同。要能表現出這一個時代的歷史特性的，那麼這部書就是歷史上一部重要的書。若使我們要研究從東漢末到隋代這一段，特別是魏晉到南朝宋的這一段，我們該要懂得這一段的時代特性在那裡？歷史特點在那裡？我想諸位都會提出一句話來，說：這是一個清談的時期。話是對了，東漢以前沒有清談，隋唐以後也沒有清談，清談正是那時期一特性。但我不免要接著問：什麼叫清談？其內容是些什麼？諸位要去找材料來解答，最好就是讀《世說新語》。我在《國史大綱》裡，有時不根據陳壽《三國志》，不根據《晉書》、《宋》、《齊》、《梁》、《陳書》，只就根據《世說新語》，舉出幾件故事來講當時人的觀點和風氣。我又寫過一篇〈略論魏晉南北朝學術文化與當時門第之關係〉一文，重要材料還是根據這部《世說新語》。此刻我再舉一例。《世說新語》中第一類是「德行」，諸位只從此〈德行〉卷，正可看出當時所謂的德行，究是怎麼樣的一回事。把來和東漢一比，這裡顯然便有個時代不同。我曾告訴諸位，《三國志》裴松之《注》，有許多事沒有注進去，我曾舉出了兩例，這兩例就在《世說新語》裡。近人也有說《史記》有〈貨殖列傳〉，認為太史公對歷史有特見，後來人不能及，這話也有些似是而非。如講《史記．貨殖列傳》，子貢是孔子的大弟子，下邊來了陶朱公、范蠡，他是越國大臣，又下邊到白圭，做過梁國宰相，下邊到呂不韋，做秦國的宰相，秦始皇還是他兒子。這些做生意人，在當時社會上地位重大，太史公自該來寫〈貨殖列傳〉。下面的做生意人，沒有社會地位了，即是沒有歷史地位了，僅不過是發點財做一富人而已，那當然不該再要〈貨殖列傳〉了。又如太史公又寫了〈游俠列傳〉，為什麼後來人不寫了？這也因在後代社會上游俠不成為一個特殊力量，卻不能怪史家不寫。為何中國古代有貨殖有游俠，而後代沒有了？這是歷史的變。我們要知道中國古代社會同後代社會的大不同之點在這裡，這裡纔隱藏著有問題。如在《後漢書》有〈文苑傳〉，而《史記》、《漢書》沒有，但以下直到清代就都有，那又是歷史變了。古代沒有專門所謂的文人，社會上沒有這流品，不能怪史家不為作傳。又如《後漢書》有〈獨行傳〉，而古代則並沒有所謂獨行之士。如伯夷、叔齊，也可算得是獨行，但不成一類，而東漢以後便多有之，這又是中國社會變了。在二十五史裡，每每有新的類傳出現，如《宋史》有〈道學傳〉，此與以前〈儒林傳〉顯有不同。明代亦然。清代就不行了，〈道學傳〉可有可無。而那時講歷史的人卻說：《宋史》不該有〈道學傳〉，只存〈儒林傳〉便可，其實是不同。儒林是儒林，道學是道學，既是那個時代新有了一種道學，就該立個〈道學傳〉。如剛才講過慧皎有《高僧傳》，當然古代沒有，但此下直到明代，高僧一路不斷，故不斷有《續高僧傳》出現。可見歷史記載要表現出當時歷史上的一個特點，也說是歷史上一個極重要的特性，或說是某種新起事項。恰恰《世說新語》就表現出東漢末年一路下來的清談這一個特點。所謂佳事佳話，也都是清談成分佔得多。所以此書直到今天流傳在學術界，而且成為史學上一部極重要的書。劉知幾不懂這層，實際上《隋書．經籍志》把此書放在子部小說家言已錯了，無怪劉知幾便要說它是委巷小說、流俗短書了。其實大書有大書的價值，短書有短書的價值，這部書體例像小說，實是一部極大有關史學的書。但我們也不能怪《隋書．經籍志》的分類，只可說小說家言也有很多極有關於歷史大事的。而且《世說新語》都是些真確而具體的佳事佳話，不像後來所說的小說，都是無中生有。〈隋志〉把此書入小說類，乃承〈漢志〉的分類法，而此下又有變，小說該入集部，不該入子部。如唐代的一部《太平廣記》，那纔真是小說了，但在《太平廣記》裡，也可研究唐代當時的社會、經濟，乃至其他方面的材料很多，可惜今天我們沒有人來運用這部《太平廣記》來發揮當時的歷史實況。這部書，將來定會有人注意到，雖然是小說，事情都靠不住，是真的，我們如何來運用這部書，就要你的識見、眼光和本領來運使。我常說：我們倘能根據《全唐詩》和《太平廣記》，以這兩部書來研究唐代史，可以獲得很多極新穎的材料，為唐史開一新天地。至於研究魏晉南北朝史，《世說新語》更見非常重要，只是在當時人不很覺得，即如劉知幾也無此眼光，但時代隔得久，此書地位便見不同。即是諸位講究作文章，此書也是非常了不起。</p>
+<p>我現在講這三部書，《高僧傳》文章就非常好，《水經注》、《世說新語》的文章也非常好。說到史料，《三國志》裴松之《注》，《水經》酈道元《注》，《文選》李善《注》，同《世說新語》的劉孝標《注》，都極可看。劉孝標《注》裡就收有一百六十六家，真是取之無盡，有很多材料在裡邊，在歷史的考據工作上也有用。我今天就講到這地方。今天諸位要寫歷史，固然也不必定要寫正史，這要看各人的眼光。外面材料容易找，如何運用材料來表現出歷史上所謂一個時代的特性，這就要我們的學問。沒有學問，材料只是材料。有了學問，材料不只是材料。莊子說：「化腐朽為神奇。」材料不能運用，可以是些朽腐。成為歷史了，那便是神奇。我們讀書，不能把書只當材料讀，《世說新語》不只是材料，我們要由此瞭解這一個時代的精神。《水經注》也不僅是材料，要懂得在當時中國的社會和經濟、農業等各種歷史上的大變，都在此書中透露出。讀《高僧傳》，則四百五十年佛教傳來的變化、佛教在中國的新歷史，都在這裡。我從前老友湯用彤先生寫《漢魏兩晉南北朝佛教史》時，我和他常在一起，他到什麼地方，一部《高僧傳》總不離手，熟極了。他這部佛教史是一部好書，而我看他花在《高僧傳》上的工夫真是極大。可見書是人人能讀，但各有巧妙不同。若諸位認為做學問不須讀書，那就無話可講。若認為讀書是一件重要事，則讀書中的巧妙，諸位更應注意。沒有巧妙，一味死讀，那也是要不得。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="綜論東漢到隋的史學演進.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="劉知幾史通.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="綜論東漢到隋的史學演進.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="劉知幾史通.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

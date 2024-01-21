@@ -1,0 +1,241 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>劉知幾史通 - Mdbook Template</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="弁言.html">弁言</a></li><li class="chapter-item expanded affix "><li class="part-title">通覽</li><li class="chapter-item expanded "><a href="中國史學名著.html"><strong aria-hidden="true">1.</strong> 中國史學名著</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="尚書.html"><strong aria-hidden="true">1.1.</strong> 尚書</a></li><li class="chapter-item expanded "><a href="春秋.html"><strong aria-hidden="true">1.2.</strong> 春秋</a></li><li class="chapter-item expanded "><a href="春秋三傳.html"><strong aria-hidden="true">1.3.</strong> 春秋三傳</a></li><li class="chapter-item expanded "><a href="左傳（附國語、國策）.html"><strong aria-hidden="true">1.4.</strong> 左傳（附國語、國策）</a></li><li class="chapter-item expanded "><a href="史記.html"><strong aria-hidden="true">1.5.</strong> 史記</a></li><li class="chapter-item expanded "><a href="漢書.html"><strong aria-hidden="true">1.6.</strong> 漢書</a></li><li class="chapter-item expanded "><a href="范曄後漢書和陳壽三國志.html"><strong aria-hidden="true">1.7.</strong> 范曄後漢書和陳壽三國志</a></li><li class="chapter-item expanded "><a href="綜論東漢到隋的史學演進.html"><strong aria-hidden="true">1.8.</strong> 綜論東漢到隋的史學演進</a></li><li class="chapter-item expanded "><a href="高僧傳、水經注、世說新語.html"><strong aria-hidden="true">1.9.</strong> 高僧傳、水經注、世說新語</a></li><li class="chapter-item expanded "><a href="劉知幾史通.html" class="active"><strong aria-hidden="true">1.10.</strong> 劉知幾史通</a></li><li class="chapter-item expanded "><a href="杜佑通典.html"><strong aria-hidden="true">1.11.</strong> 杜佑通典</a></li><li class="chapter-item expanded "><a href="歐陽脩新五代史與新唐書.html"><strong aria-hidden="true">1.12.</strong> 歐陽脩新五代史與新唐書</a></li><li class="chapter-item expanded "><a href="司馬光資治通鑑.html"><strong aria-hidden="true">1.13.</strong> 司馬光資治通鑑</a></li><li class="chapter-item expanded "><a href="朱子通鑑綱目與袁樞通鑑紀事本末.html"><strong aria-hidden="true">1.14.</strong> 朱子通鑑綱目與袁樞通鑑紀事本末</a></li><li class="chapter-item expanded "><a href="鄭樵通志.html"><strong aria-hidden="true">1.15.</strong> 鄭樵通志</a></li><li class="chapter-item expanded "><a href="馬端臨文獻通考.html"><strong aria-hidden="true">1.16.</strong> 馬端臨文獻通考</a></li><li class="chapter-item expanded "><a href="黃梨洲的明儒學案、全謝山的宋元學案.html"><strong aria-hidden="true">1.17.</strong> 黃梨洲的明儒學案、全謝山的宋元學案</a></li><li class="chapter-item expanded "><a href="從黃全兩學案講到章實齋文史通義.html"><strong aria-hidden="true">1.18.</strong> 從黃全兩學案講到章實齋文史通義</a></li><li class="chapter-item expanded "><a href="章實齋文史通義.html"><strong aria-hidden="true">1.19.</strong> 章實齋文史通義</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">天漢春秋</li><li class="chapter-item expanded affix "><li class="part-title">核心問題</li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Mdbook Template</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="劉知幾史通"><a class="header" href="#劉知幾史通">劉知幾史通</a></h1>
+<p>今天我要講到劉知幾的《史通》，那已在唐代。《史通》這部書，在中國學術著作中，有一個很特殊的地位。中國人做學問，似乎很少寫像「通論」一類性質的書，如文學通論、史學通論等。中國人做學問，只重實際工作，很少寫通論概論，《史通》則可說是中國一部史學通論，也幾乎可以說是中國唯一的一部史學通論，所以這書成為一部特出的書。我講過，從東漢到魏晉南北朝有兩種新的學問，一是史學，一是文學，於是乃有經史子集之四部分類。在文學方面，最著名的有一部梁昭明太子的《文選》，薈萃了這時代新興的各家的文章。另外有一書，《文心雕龍》，是梁代劉勰所著，這書可以說也是一部極特殊極有價值的文學通論。宋人黃山谷曾說：《文心雕龍》和《史通》，二書不可不觀。他就把《文心雕龍》和《史通》兩書相提並論。但中國在文學上自唐代韓、柳古文運動起，經宋以下，有了古文，對文選體的文章就比較看輕了。而劉勰的《文心雕龍》，不僅是他批評的重要在駢文方面，而他書的本身也是駢文，所以比較不受後人重視。而中國的史學則不像文學，並無一個新的轉變，因此一般人一路下來仍多讀《史通》。《文心雕龍》到了唐宋以後，慢慢注意的少，直要到近代，不再看重唐宋古文，以至桐城派，而再回上去，研究魏晉南北朝的駢文，這部《文心雕龍》遂又被看重了。</p>
+<p>今天我們平心來看這兩部書，由我的看法，《文心雕龍》之價值，實還遠在《史通》之上。我曾講過，史學當有三種工作，即考史、論史、著史。《史通》向來列為一部評史的書，但評史更重要是在評論這一時代的歷史。而《史通》只是評論「史書」，不是評論歷史。史書記載「史情」，應具「史意」。什麼叫「史情」呢？這是當時一件事的實際情況。如漢武帝表彰六經、罷黜百家，這是一件事，這件事的實際情況我說它是史情。今天我們說這是漢武帝要便利專制，其實並不合於當時歷史實情。每一件史事背後，我們要懂探求其實情，這實情背後就有一個「史意」。這是在當時歷史實際具有的一種意向。當時歷史究在那裡要往那一條路跑，跑得到跑不到是另外一件事，但它有一個意向，想要往那條路跑。我們學歷史的人，就應該認識這個史之意。史意得了，史情自然也得了。如我們研究《春秋》，就該認識春秋時代這段歷史背後的一番意向，才能真明白到那時歷史事件之真實情況。這才是我們的史學。我們具備了這一種的史學，才能來寫歷史，而後才始有史書。史書的最大作用，要能發掘出他所寫這一時代的史情與史意。史學家寫史的作用在這裡，我們要來批評歷史、考史、論史也該從這個地方去注意。而《史通》則儘在那裡論史書、史法。《史記》怎麼寫的，《漢書》怎樣寫的，寫得好和壞，儘在寫史的方法上著眼。倘使照我剛才的理論講，史書最重要的要能看出當時這許多史事背後的實情和意向，而劉知幾《史通》在這方面是缺乏的。他只注意在幾部史書的文字上，沒有注意到史的內容上。他只論的史法，沒有真接觸到史學。苟無史學，他所論的史法，都是膚淺的、皮毛的。史法之真實根源，並未涉及。孔子《春秋》是有史法的，但《春秋》史法之來源，則在孔子對春秋時代之史情與史意，有他一番極深的看法。</p>
+<p>有人問過劉知幾，說：從古以來，為什麼文人多，史才少？劉知幾回答說：「史有三長，才、學、識。世罕兼之，故史才少。」他講一個史學家應有三種長處，即史才、史學、史識。此後中國人講史學，都喜歡講這三長。今講到史才，如舉近代梁任公為例，他寫的《中國六大政治家》，特別寫到其中的王荊公，他又寫《歐洲戰役史論》、《清代學術概論》等，我覺得梁任公該可說有史才，他實能寫歷史。但所不足的是在史學。他究嫌書讀得少，並也不能精讀，因此他對這一時代的事情真知道得不多。他論王荊公變法，論清代學術，均無真知灼見。他並沒有在這些上詳細地學，他可能是有才而無學。至於說到「識」字，那就更高一層。梁任公講《中國六大政治家》、講《清代學術概論》，均嫌見識不夠。今天來講劉知幾，劉知幾一輩子在史館供職，然而沒有機會來寫一部歷史，因此就不易見他的史才與史學。從某一個角度看，我們上面講過《隋書．經籍志》中許多歷史書，劉知幾幾乎都看到，也都批評到，似乎不能說他無史學。然而他所重只在文字上、在方法上，說不到有史識。則其所學也就另外是一件事，不能說他真學著歷史。因為他只是在那裡講幾部歷史書，並不是在講那幾部歷史書中之歷史。諸位讀了劉知幾的《史通》，最多僅知道些我們該怎麼來寫歷史。他只在史法、史筆上注意，倘使對這一段歷史自己並沒有一番很深切的見識的話，那這些史筆、史法也就根本談不上。這是我講劉知幾《史通》的大缺點。他這書並沒有講到史書背後的史情和史意，他僅是讀了那時許多的歷史書，而並沒有進一步通到史學。</p>
+<p>他書分〈內〉、〈外〉兩篇，〈內篇〉中第一篇叫〈六家〉，他把中國古代史書分成《尚書》、《春秋》、《左傳》、《國語》、《史記》、《漢書》六家，這講法大體並不差。我們講了半年的史學名著，主要也只是講這幾部書。他怎麼分這六家的呢？就是照這六部書的體例來分，這個我們都已大體講過。他的第二篇稱〈二體〉，在這六種不同體例之上，特別舉出兩種的大不同。一種的代表就是《左傳》，這是編年體。一種的代表是《史記》，就是列傳體。劉知幾《史通》又批評到《尚書》，他說：「《書》之所主，本於號令，所載皆典、謨、訓、誥、誓命之文，〈堯〉、〈舜〉二典直序人事，〈禹貢〉一篇僅言地理，〈洪範〉只述災祥，〈顧命〉都陳喪亂，為例不純。」他指出《尚書》應是一部記言的書，而中間如他所舉諸篇為例，不純是這一講法。可見劉知幾對於史書的體例方面，實曾用心，並有一種極深刻的眼光，所以能發出這樣的極深刻的批評。照我們現在講法，〈堯典〉、〈舜典〉、〈禹貢〉、〈洪範〉這許多所謂今文《尚書》的，本來不是當時真的《尚書》，實際上只是戰國時代人所偽造，是可以懷疑的。證據在那裡？只把劉知幾這段文章來推論，也可以做我們懷疑這幾篇書的一個很好的根據。可見劉知幾對於批評史書體裁方面，確是相當有他的見解。</p>
+<p>我們再照上面所講，史書中一種是編年體，如《左傳》。一種是列傳體，如《史記》。又一種應該是記言體，而又兼記事的，那就是《尚書》。《尚書》本是記言的，但記言不得不兼記到事，這些我們都講過。《國語》在劉知幾的六家中另立一家，那也可以。可是劉知幾在他〈二體〉篇中，又說我們後來人應該取法的，只有《左傳》同《漢書》兩家。這個講法，就可證明劉知幾實在是沒有史學，並沒有史識。若我們只以記事一個角度講，《左傳》是比《春秋》來得詳備了。可是更高一層從寫歷史的精神上來講的話，當然孔子《春秋》遠在《左傳》之上。劉知幾徒然震驚於《左傳》敘述之詳備，而漠視了孔子《春秋》之義法，那是他見識小。又如太史公寫《史記》，所謂「究天人之際，通古今之變，成一家之言」，這種精神，就遠在《漢書》之上。但為何劉知幾卻主張我們要寫列傳體史書，只教學《漢書》呢？此因《漢書》是一部斷代為史的，以後中國人寫正史，都是一個時代一個時代分著的。所以說我們應該學《漢書》。但是劉知幾僅知贊成一個斷代為史的體裁，但並不能因為《漢書》之斷代為史而忽略了太史公作為《史記》的精神。我和諸位講史學名著，對孔子《春秋》和司馬遷《史記》之評價，遠在《左傳》、《漢書》之上，這是和劉知幾不同之點，所爭則在「史識」上。《漢書》僅看重在歷史裡的事情和其記載事情的方法，不知歷史更有超於事情之上的。如太史公說孔子《春秋》「貶天子、退諸侯、討大夫」，這些天子諸侯大夫種種事，你要能懂得貶他、討他，這就是另外一件事了。又如說「究天人之際，通古今之變」，這是在歷史事情之上，更有一套高深的意義，留待我們作史的人去探討去發掘。劉知幾的《史通》，就並不能瞭解到這一方面去。所以劉知幾的《史通》，後人說他「工於訶古」，他批評前人很苛刻。但他自己提出來的意見，我覺得有許多有問題。如他認為〈天文志〉不該寫入歷史，因歷史常在那裡變，而天文則是一個不變的，並且他認為天文和歷史沒有關係。我們此刻也可說天文學應該放進自然科學，不在人文科學裡，這話自是對的。但寫歷史的人，一代有一代的〈天文志〉，把他當時人對天文的知識寫下，我們現在看著一代一代的〈天文志〉，我們才知道當時人對天文知識的不同，這也不能不算歷史。究竟天文是怎麼一回事，直到今天的天文學家還是不能完全知道，所以劉知幾這個意見，我覺得並不很正確。又如劉知幾認為《漢書．藝文志》可不要，這意見就大錯了。把當時許多書籍綜合起來寫一個《漢書．藝文志》，到了《隋書．經籍志》，一路下來，中國好幾部歷史裡都有〈藝文志〉、〈經籍志〉，我們今天正可以根據這些篇文字來瞭解我們歷史上各時代學術的變遷，這是個非常重要的記載。而劉知幾《史通》認為這些就不必放在歷史裡。他又說既然有了〈天文志〉，為什麼沒有「人形志」？既然有了〈藝文志〉，為什麼沒有「方言志」？人形志研究人種，研究人的頭髮、皮膚顏色等，這都是科學，儘可不寫在歷史裡。方言也可不寫進歷史。人形之與天文、方言之與藝文、經籍，究竟在當時歷史上，影響大小大不同。究因劉知幾對整個歷史沒有一番清楚明白的看法，因此他遂橫生駁議，而並不中肯。</p>
+<p>劉知幾又批評《漢書．地理志》只講郡國，那只是一種政治地理，他主張該有「都邑志」，則是人文地理了。他又主張要有「氏族志」、「方物志」等。像此之類，到了後來鄭樵的《通志》，就特別看重這些意見。劉知幾又特別講：「凡為史者，宜於表志之外更立書，人主之制詔冊令，群臣之章表檄議。」全收入此處。他不曉得史部已與集部分開，這許多全應放在集部裡。即如一部《全唐文》，每一個皇帝的詔令、每一個臣子的奏議，若都把來放在《唐書》裡去，《唐書》萬萬容納不下。劉知幾批評某一書某一書的，今天且不講，所講只是他所提出的一些正面而共通的意見，他主張正史該如何，但這許多提議都不很值得我們之欣賞。尤其是他極端的批評《漢書．古今人表》，我已經講過，〈古今人表〉也有它在歷史上的作用，並不能說是十分要不得。後來人批評劉知幾《史通》，則說：「薄堯舜而貸操丕，惑《春秋》而信汲冢，訶馬遷而沒其長，愛王劭而忘其佞，高自標榜，譏訶賢哲。」我覺得這樣的批評，都是講得很好。總之，劉知幾只注意到史書，沒有注意到歷史本身，也沒有注意到寫歷史的背後的這個人，如像孔子作《春秋》、司馬遷作《史記》，此兩人究同左丘明作《左傳》、班固作《漢書》不能並論，而劉知幾在這些地方就忽略了。</p>
+<p>我們再可講到劉知幾自己的學問。上面講的是《史通》的〈內篇〉，最重要的，我們只講它第一篇〈六家〉，和第二篇〈二體〉。下邊講《史通》的〈外篇〉，第一篇〈疑古〉，第二篇〈惑經〉。劉知幾對於古代的中國史懷疑，他說：「倘漢魏晉宋之帝君生於上代，堯舜禹湯之主出於中葉，史官易地而書，各敘時事，校其得失，固未易是。」這樣一講，就對全部歷史泛起了一種虛無的看法。那是一種極刻薄、極輕浮的虛無主義。人物無賢奸，歷史無定準，特別是到了近代，我們講歷史的人，又特別喜歡疑古，「疑古」成為近人治史一大運動。劉知幾《史通》這部書，遂成為近代人之同調、近代人之先覺。中國古人早已如此講了，豈不為近人一安慰、一鼓勵。劉知幾〈惑經〉篇說：「《春秋》之義所未喻者七。」又說《春秋》有「五虛美」，《春秋》並不這樣好，只是後人虛美了它。又說：「王充問孔，《論語》備見指摘，而《春秋》雜義，曾未發明。」他很高興王充《論衡》裡的〈問孔〉篇對《論語》加以許多批評，而恨他沒有批評到《春秋》，他是來補充王充而批評孔子《春秋》的。所以又特別有一篇〈申左〉，說《左氏》有三長，而《公》、《穀》二傳有五短。這些，我不想在此多講，只可說劉知幾僅通史學，不通經學，這是劉知幾學術上之偏處、短處。《唐書．劉知幾傳》說劉知幾十二歲時，他父親叫他讀《尚書》，他讀不進。同他講《左傳》，他就開心。可見劉知幾從年輕時就喜歡史學。他自己說：「始在丱角，讀班范《兩漢》。」可見劉知幾本身做學問本有所偏，只愛讀史而不通經。固然我們可說他天性所近在史學，這是劉知幾學問長處，我們不得不看重。然而他幼年從學就走了「偏鋒」，並未對學問有個大體的瞭解，亦未對學問有多方面的探求，就他自己才氣近的一方面，就在這方面儘量發展，雖然成了如《史通》這樣一部書，然而他的著作究為他的學問所限，不是一部理想的完作。</p>
+<p>我們也可進一步來講，有了自東漢以下到隋代這一大段的史學，才有劉知幾出來寫他的《史通》。若使在劉知幾以前，史學界早有一番極高明的史學的話，劉知幾也就不止於此。正因從班孟堅《漢書》以下，都不能和司馬遷《史記》相比。《三國志》、《後漢書》一路下來，經學、史學大義慢慢迷失，所以當時人已只懂看重班孟堅的《漢書》，而不能看重到太史公的《史記》。講材料，班固《漢書》是來得細密了，或許可在《史記》之上。但講史識、講學問的大精神，《史記》這一套，班固就沒有學到。以後一路跟著班固的路，史學慢慢走向下坡，我們只要讀劉知幾的《史通》，就可以回過頭來，看東漢以後史學的慢慢兒地暗淡了。只要東漢以後，能有一套高明深遠的史學見解的話，劉知幾也不會無所知。劉知幾是銜接著上面傳統的史學而來，也可以說，我們要瞭解《隋書．經籍志》裡從東漢以下的那一套史學，我們只讀劉知幾《史通》，便可瞭解，因在《史通》書中講得多了。所以我們讀了劉知幾《史通》，就可回過頭來看東漢以下直到唐代初年的這一段史學。在外觀上看，是史學很盛，但是看到他的內裡精神方面去，史學實已衰了，遠不能同從周公、孔子到司馬遷那一段相比。我們也可說，劉知幾《史通》其實也只是等於一部材料的書。在他以前許多史書，那部書特點在那裡，那部書長處在那裡，我們藉由《史通》可得很多知識。但諸位千萬不要學了他這書的最大缺點，即是一「薄」字。不要看他書中批評的苛刻，覺得《史通》了不得，那就會引我們入一條歧途。尤其是今天的學者，怕有很多是喜歡走此路，疑古惑經、恣意批評，無論其見解是非，只是太輕薄、太不忠厚，便該是一病。</p>
+<p>我們從此再回頭來看劉勰的《文心雕龍》，那就偉大得多了。他講文學，便講到文學的本原。學問中為什麼要有文學？文學對整個學術上應該有什麼樣的貢獻？他能從大處會通處著眼。他是從經學講到文學的，這就見他能見其本原、能見其大，大本大原他已把握住。固然此下像韓愈、柳宗元、歐陽脩這些人出來，提倡古文，反對駢文，實際上他們講文學的最高價值，並不能超出劉勰的《文心雕龍》之上。劉勰是做了和尚的，他早年就在和尚寺裡讀書，當時和尚寺裡許多大和尚所講的一套，也都是義理之學，懂得講本原。講釋家的，也會注意到孔子、老子。所以當時第一等的人才都會跑進和尚寺，也都會尋究佛學。劉勰從和尚寺裡讀書讀出來，最後還是做和尚，他的治學方法，應受當時佛門影響。他這部《文心雕龍》，還是值得我們看重，因他能注意到學問之大全，他能討論到學術的本原，文學的最後境界應在那裡，這些用心，都是劉知幾《史通》所缺乏的。拿今天的話來講，劉知幾僅是一個史學專家，他的知識、他的興趣，完全在史學這一門裡。而劉勰講文學，他能對於學術之大全與其本原處、會通處，都照顧到。因此劉勰並不得僅算是一個文人，當然是一個文人，只不但專而又通了。</p>
+<p>劉勰《文心雕龍》的文章也是駢文，而他的文章也比劉知幾《史通》的文章好。劉知幾《史通》也是駢文，但不如劉勰的《文心雕龍》，諸位把此兩部同性質的書來合看，便懂得此兩書之高下，也可懂得此兩書背後著書人學問的高下。劉知幾在唐朝史館裡蹲了三十年，一生學問並未超出了歷史，只恨自己沒有來寫一部史，不像劉勰，從開頭在和尚寺，將來還是做和尚，然而他倒能注意到學問大全和文學本原，經史會通，這許多方面去。所以說，唐初的《史通》，可說是《隋書．經籍志》全部史學的最後結束。我們從《史通》的缺點，就反映出東漢以下當時中國史學上的缺點。而當時的大學問反而跑進和尚寺，不僅佛學在和尚寺裡，即如劉勰的《文心雕龍》也見其超出於像劉知幾《史通》之上了。最近我們的學問是不在中國了，學問全到國外去，然而今天的國外，也似乎劉知幾比劉勰更時髦。那就無可多講了。</p>
+<p>我今就史論史，當知從事學問，先該知一個總體，又定要有一個為學的本原，從這裡再產生我們的史學來。論史也要從這大的地方來論。堯、舜到底不能和曹操、司馬懿相比，〈古今人表〉分別人品，我們治史的不能不知。考史也不能帶了有色眼鏡來考，若要寫歷史，更要有一番大本領。必有其本原所在，才能寫出好歷史來。不然則最了不起也只能等於一部《左傳》、一部《漢書》，此為劉知幾所最佩服的，但到底不可上及孔子《春秋》與司馬遷《史記》。</p>
+<p>我今天批評劉知幾《史通》，用意在學術上指出一準繩。像《史通》，不算得是史學上之最高準繩。我又曾說：讀其書，必該知其人，如讀《史通》，便該瞭解到劉知幾從幼年做學問就走到偏路。當然司馬遷一輩子也只是寫了一部《史記》，可是在《史記》書裡，便可見司馬遷有一個大的背景、大的立場，不僅是史學兩字能限。諸位在此上定要用心，這是我們做學問的胸襟。我們不能先把一個史學來限著我們，至於做到做不到是另外一回事。所謂「究天人之際，通古今之變，成一家之言」，諸位試看，這豈不是史？但又哪裡是專限於史？有其志而做不到，和根本沒有這個志，兩者大不同。尤其是根本無知，而多隨便亂批評，那更要不得。當然劉知幾《史通》批評以前各史種種缺點，也多為此下史家所採用。而我今天又要來批評劉知幾，諸位當心知其意，莫謂我也是好譏評，學刻薄。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="高僧傳、水經注、世說新語.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="杜佑通典.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="高僧傳、水經注、世說新語.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="杜佑通典.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

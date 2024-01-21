@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>漢書 - Mdbook Template</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="弁言.html">弁言</a></li><li class="chapter-item expanded affix "><li class="part-title">通覽</li><li class="chapter-item expanded "><a href="中國史學名著.html"><strong aria-hidden="true">1.</strong> 中國史學名著</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="尚書.html"><strong aria-hidden="true">1.1.</strong> 尚書</a></li><li class="chapter-item expanded "><a href="春秋.html"><strong aria-hidden="true">1.2.</strong> 春秋</a></li><li class="chapter-item expanded "><a href="春秋三傳.html"><strong aria-hidden="true">1.3.</strong> 春秋三傳</a></li><li class="chapter-item expanded "><a href="左傳（附國語、國策）.html"><strong aria-hidden="true">1.4.</strong> 左傳（附國語、國策）</a></li><li class="chapter-item expanded "><a href="史記.html"><strong aria-hidden="true">1.5.</strong> 史記</a></li><li class="chapter-item expanded "><a href="漢書.html" class="active"><strong aria-hidden="true">1.6.</strong> 漢書</a></li><li class="chapter-item expanded "><a href="范曄後漢書和陳壽三國志.html"><strong aria-hidden="true">1.7.</strong> 范曄後漢書和陳壽三國志</a></li><li class="chapter-item expanded "><a href="綜論東漢到隋的史學演進.html"><strong aria-hidden="true">1.8.</strong> 綜論東漢到隋的史學演進</a></li><li class="chapter-item expanded "><a href="高僧傳、水經注、世說新語.html"><strong aria-hidden="true">1.9.</strong> 高僧傳、水經注、世說新語</a></li><li class="chapter-item expanded "><a href="劉知幾史通.html"><strong aria-hidden="true">1.10.</strong> 劉知幾史通</a></li><li class="chapter-item expanded "><a href="杜佑通典.html"><strong aria-hidden="true">1.11.</strong> 杜佑通典</a></li><li class="chapter-item expanded "><a href="歐陽脩新五代史與新唐書.html"><strong aria-hidden="true">1.12.</strong> 歐陽脩新五代史與新唐書</a></li><li class="chapter-item expanded "><a href="司馬光資治通鑑.html"><strong aria-hidden="true">1.13.</strong> 司馬光資治通鑑</a></li><li class="chapter-item expanded "><a href="朱子通鑑綱目與袁樞通鑑紀事本末.html"><strong aria-hidden="true">1.14.</strong> 朱子通鑑綱目與袁樞通鑑紀事本末</a></li><li class="chapter-item expanded "><a href="鄭樵通志.html"><strong aria-hidden="true">1.15.</strong> 鄭樵通志</a></li><li class="chapter-item expanded "><a href="馬端臨文獻通考.html"><strong aria-hidden="true">1.16.</strong> 馬端臨文獻通考</a></li><li class="chapter-item expanded "><a href="黃梨洲的明儒學案、全謝山的宋元學案.html"><strong aria-hidden="true">1.17.</strong> 黃梨洲的明儒學案、全謝山的宋元學案</a></li><li class="chapter-item expanded "><a href="從黃全兩學案講到章實齋文史通義.html"><strong aria-hidden="true">1.18.</strong> 從黃全兩學案講到章實齋文史通義</a></li><li class="chapter-item expanded "><a href="章實齋文史通義.html"><strong aria-hidden="true">1.19.</strong> 章實齋文史通義</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">天漢春秋</li><li class="chapter-item expanded affix "><li class="part-title">核心問題</li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Mdbook Template</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="漢-書"><a class="header" href="#漢-書">漢　書</a></h1>
+<p>今天接講班固的《漢書》。我們常稱「遷固」「《史》《漢》」，見得班固《漢書》是和司馬遷《史記》立在平等地位的。《漢書》是中國正史的第二部，又是中國斷代為史的第一部。《史記》實是一部通史，是一部紀傳體的通史，它從黃帝下到漢武帝，稱漢武帝曰「今上」──現在的皇帝，可見它的體裁乃是一部從古到今的通史。但後人要承續《史記》接下卻很困難。每一部書應該有它自己一個系統，不易往上接。自從《史記》以後，就有很多人續《史記》，要接著《史記》寫下去。但只是零零碎碎一篇一篇的傳，精神不一致，不易成一書。而且這樣零碎地續，也沒有個段落。到了班固，來一個斷代史，採用了《史記》後半部講漢代前半的，接著再寫漢代的後半部，直到王莽起西漢亡為止，歷時兩百三十年，稱曰《漢書》，這樣就成了一部斷代史。此後的人，都待換了一朝代來寫一部歷史，直到現代，就成了二十五史。在我認為，「斷代史」有它的必要。剛才所講的兩點，就是它的必要。而且中國傳統政治和世界其他民族與國家的政治有不同。它是一個大一統政府，又比較可以說是長治久安，隔了兩三百年纔換一個朝代。既然朝代換了，當然政治上也換了很多花樣。不僅政治如此，一個朝代弄到不能維持，要改朝換代，當然歷史也就跟著變。我們用此作分界來寫歷史，那是非常自然的。近代人抱著一種歷史新觀點，認為中國歷史都只講朝代，漢、唐、宋、明，只把帝王為重，這樣的批評，其實並不盡然。換了一個朝代，就表示歷史起了一個大變動，我們自應來寫一部歷史，把前面那一段記下。從班固《漢書》以後，一路到清末，都如此。只是今天以後的中國，則不像從前了，不再會有一個一個的王朝興亡。此下歷史該經什麼時期來整理一次呢？這就成了問題。隨時寫是不行的，過了多少時才該寫，又沒有一個客觀的、自然的標準。今天以後的歷史，只這問題，就很困難。如今單是中華民國開國六十年，是否應該寫一部歷史，來整理前面的六十年呢？這也成一說法。但六十年和六十一年，未必便該在這裡畫一個段落。其間有種種不方便，這是事實。將來究該怎樣來不斷寫通史，並不曉得。但諸位讀歷史，第一應知，讀史都該注重近代史。第二應知，學歷史的定要能寫歷史。至於如何樣去寫，諸位都該先在心中構成一問題，該不斷討論思索。至少講來，班固《漢書》在清代以前確實不可否認的是開了一條寫史的新路。史書開始有紀傳體，是司馬遷的大功。而換了朝代立刻來寫一部歷史，這是班固的貢獻。以後正史都是學的班固《漢書》，這就無怪乎要「遷固」「《史》《漢》」並稱了。</p>
+<p>我們再說，自從司馬遷寫了《史記》，很受一般人看重，就不斷有人來「續《史記》」。在班固前，西漢還沒有亡，已不曉得有多少人一篇一篇的來「續《史記》」。較著名的劉向、劉歆、揚雄，還有像馮商、史岑等很多人。大抵舉得出名字來的，總有二十人左右，中間有一個特別重要的人是班彪，他是班固的父親，他也續《史記》，稱《史記後傳》，這是《史記》以後新寫的傳，據說寫了有幾十篇，也有說他寫了六十五篇。班固《漢書》共一百卷，〈本紀〉十二篇，〈表〉八篇，〈志〉十篇，〈列傳〉七十篇，連太史公寫的漢武帝以前的好多列傳都在內。〈項羽本紀〉還有〈陳涉世家〉，都改了〈列傳〉。而班彪就續寫了六十五篇，或許這些列傳，班固並沒有完全用，或許數人併一傳，至少班彪所寫的《後傳》，在《漢書》中所佔份量已很大。但我們無法在《漢書》裡找出哪幾篇是班彪所寫，更無法來考查班彪當初所寫，班固有沒有改動。大家只知班固《漢書》是跟著他父親而來，固然我們不必硬要把《漢書》分作兩部看。但班固寫《漢書》時，有人告發他，說他「私改作《史記》」，因此下了獄，把他家裡書一併搜去。其弟班超為兄申辯說，其兄並未私改《史記》，乃是跟著他父親所寫《後傳》繼續寫下。班固獲釋後，漢廷派幾人來寫新的東漢開國史，班固也是其中之一。以後漢廷就令班固續完他的《漢書》。至於此書正名為《漢書》，怕是班固的事。從漢高祖開始到王莽，這一百卷《漢書》的體例，也該是班固所定。他書有〈本紀〉、有〈表〉、有〈志〉、有〈列傳〉，而無〈世家〉。依照太史公《史記》，封侯的都作〈世家〉。漢武帝以後封侯的人還很多，班彪寫《後傳》，恐已只叫列傳。只是斷代為史，則或許是班固自創新體。自他出獄，朝廷正式派他寫完這部書，大概有二十多年的工夫，可是書並沒有寫完，賸下八篇〈表〉，還有〈天文志〉。外戚竇憲得罪，班固也被下獄，死在獄中。但此書我們正可稱它做「官書」，因其是奉詔著作的。不如司馬遷《史記》，是他為武帝中書令時自動撰寫的。《漢書》主要內容是在昭、宣、元、成、哀、平，連王莽共七朝。他死後，有妹名昭，亦稱曹大家，奉漢廷命整理此書，補成了八篇的〈表〉和一篇〈天文志〉。政府還派了十位青年來助班昭完成此舉，其中有後來負大名的馬融，融兄續，〈天文志〉或許是他所續。因此這部《漢書》，不講別人，單從班彪到班固，再到他妹妹昭，還有像馬續，時間經歷了幾代。專是班固自己，也就花了至少二、三十年的工夫。</p>
+<p>這部書中所用材料，第一是根據他父親所寫，又根據其他人如劉向、劉歆、揚雄、馮商、史岑諸人。在《漢書．藝文志》裡有一書稱《著記》一百九十卷，此是漢廷史官所撰，或許亦為班固撰《漢書》時所採用。而在葛洪《抱朴子》裡有一段話說：「家有劉子駿《漢書》百餘卷。歆欲撰《漢書》，編錄漢事，未得成而亡，故書無宗本，但雜錄而已。試以考校班固所作，殆是全取劉書，其所不取者二萬餘言而已。」此謂書無宗本，但雜錄而已者，亦可說只是一些札記。故謂他「編錄漢事」，殆是一條一條一段一段地編錄。而以此一百多卷的編錄本來校班固的《漢書》，幾是全部採取了劉子駿的編錄，沒有用的只有兩萬多字。葛洪這段話，不像是隨便造說，可是當好好審讀。第一，劉歆書只是個雜錄，非有成書。第二，說「班固所作，殆是全取劉書」，此語可分兩個講法。一是班固《漢書》完全抄了劉歆；一是劉歆《漢書》雜錄，為班固完全抄了。此兩講法大不同，我們絕不能說班固《漢書》「全取劉書」，明明他父親就寫了幾十篇傳。但劉歆的編錄，班固卻全抄了，不抄的只有二萬多字。劉歆乃西漢末年一位大學者，他編錄了一百多卷材料，全為班固所取，那亦必是很重要的。至於《漢著記》一百多卷中間材料如何，我們無法知道。若說如孔子以前的「未修《春秋》」，那恐未必然。而劉歆在西漢學術上的地位，則或許還應在揚雄之上，決不輸過班彪。班固花了幾十年工夫，憑藉他父親及劉揚編錄下的許多好材料在那裡，倘使諸位今天要寫一部六十年的民國史，而從前有人先有一部筆記預備寫民國史的留給你，那自然用處就大了！我想劉歆所錄下的材料總是很有用。試舉一例，《漢書》裡特別詳及谷永，此人對劉歆發生著大影響，我在《劉向歆父子年譜》裡，說谷永是當時大儒，漢代後半期的政治思想，此人影響非常大。劉歆助莽代漢，自有一套政治思想作底，非如後來魏晉篡位之比。今《漢書》裡谷永材料特別多，或許正是劉歆所編錄，也不可知。</p>
+<p>我們批評《漢書》內容，同時就該批評到班固這個人。書的背後必該有人，讀其書不問其書作者之為人，決非善讀書者。諸位不要認為書寫出便是。如他寫了一部歷史書，他便是個史學家，此固不錯。但我們也得反過來看，因他是個史學家，才能寫出一部歷史。而且我們也不要認為每一作者之能事，儘只在他寫的書上。孔子之為人，不能說專在寫《春秋》。周公之為人，也不能說專在〈西周書〉裡幾篇與他有關的文章上。司馬遷寫下了一部《史記》，但儘有許多其他方面的，在《史記》裡不能寫進去。我們要根據《史記》來瞭解司馬遷一個活活的人，若我們只讀《史記》，而不問司馬遷其人，即是忽略了《史記》精神之某一方面，或許是很重要的一方面。若我們來講人的話，則班固遠不如司馬遷多了。在後代中國，唐以前多看重《漢書》，宋以後始知看重《史記》。鄭樵《通志》裡說：「班固浮華之士，全無學術，專事剽竊。」在《文選》裡班固有〈兩都賦〉、〈幽通賦〉等，故而說他是「浮華之士」。但若說他「全無學術，專事剽竊」，那話或許講得過分些。寫史當然要抄書，太史公《史記》也何嘗不是從舊史料中抄來。《漢書》最後一篇〈敘傳〉，正是學《史記》裡的〈太史公自序〉。但〈太史公自序〉把他寫書歸之其父之遺命，即在〈報任少卿書〉中亦然。而班固的〈敘傳〉卻並沒有講到他父親，說他自己的《漢書》只是承續父業。有人為班固辯護，在《漢書》裡也曾稱到他父親，而稱「司徒掾班彪」。看這五字，便見與司馬遷不同。司馬遷稱他父親為太史「公」，不直稱太史令，又更不著姓名，那見是司馬遷之尊親。而班固稱他父親便直呼「司徒掾班彪」，這可說是班固的客觀史筆嗎？班固寫《漢書》，或說開始固是繼續著他父親的寫下，後來則是奉了朝廷詔旨而寫，因此他不能說我這書是繼續父親的，這也是強為辯護。無論怎麼講，總覺得班、馬兩人有不同。班固明明是繼承父業，而把父業抹去了，在他〈敘傳〉裡沒有大書特書地把他父親寫出來，單拿這一點論，鄭樵稱之為「浮華之士」，實不為過。</p>
+<p>當時有人說班固寫《漢書》有「受金之謗」。別人賄賂他，希望寫一篇好傳，或者把壞事情少寫幾句，這話見於劉知幾《史通》。當然是相傳下來有此話，所以劉知幾《史通》也講到了。在先有劉勰的《文心雕龍》，在〈史傳〉篇裡已為班固辯誣，說「徵賄鬻筆之愆」是沒有的。所以我們不能根據這些來批評《漢書》。可是鄭樵《通志》又說，東漢肅宗曾對竇憲說：重視班固而忽略了崔駰，那是不識人，等於葉公之好龍。平心而論，班固在人品上、學術上或許不如崔駰，是可能的。然而《漢書》一出，「當事甚重其書，學者莫不諷誦」。在王充的《論衡》裡也就屢次提到班固《漢書》，可是後來又有人說王充看見了班固，那時班固還是一小孩子，王充摸著他頭說：這個小孩將來要做大事！這就不可靠，不過王充曾稱讚過《漢書》則是事實。只舉一人，後來寫《後漢書》的范曄，在他的《後漢書》裡便有班彪班固的傳，他曾批評司馬遷班固說：「遷文直而事覈，固文贍而事詳。」這十字，十分有道理。司馬遷的文章「直」，而事則「覈」，是經得起考據和批評的。當然《史記》裡也有事情講錯的，不曉得多少，大體言之，文直事覈，縱有忽略，也可原諒。「贍」就不如「直」，「詳」亦不如「覈」。若使文贍而不直，事詳而不覈，那就要不得。范曄接著又說：「固之序事，不激詭、不抑抗、贍而不穢，詳而有體，使讀之者而不厭。」此說《漢書》敘事不過激，也不詭異，不把一人一事過分壓低，或過分抬高。「贍而不穢」，是說整齊乾淨不髒亂。「詳而有體」，是說每事本末始終，表裡精粗都有體。故能「使讀之者不厭」，《漢書》能成大名，確有道理。我覺得范蔚宗此一批評卻很好。但范氏又說：「其論議常排死節，否正直，不敘殺身成仁之為美，輕仁義，賤守節。」此數句卻批評得甚為嚴重。這些病痛，當知並不在行文與敘事之技巧上，而在作者自己的見識與人格修養上。諸位如讀《太史公書》，即如〈魏公子列傳〉、〈平原君列傳〉、〈刺客列傳〉之類，此等文字，皆非《戰國策》書中所有，乃太史公特自寫之，而使人讀了無不興會淋漓，歡欣鼓舞，想見其人。《漢書》中此等文字絕找不到。諸位且把《漢書》從頭到尾翻一遍，何處見他排死節？何處見他否正直？例如〈龔勝傳〉，他是漢末一死節之士，而班固說他「竟夭天年」，這豈不是說照理還該活，而死節轉貽譏了嗎？又如王陵、汲黯，此兩人，太史公《史記》裡都有，《漢書》稱他們為「戇」。又如〈王章傳〉，那也是能殺身成仁的，而班固批評他說：「不論輕重，以陷刑戮。」又如〈何武傳〉，班固說：「依世則廢道，違俗則危殆。」既怕危殆，自然也只有依世。又如〈翟義傳〉，班固批評他「義不量力，以覆其宗」。即觀上舉諸例，可見班氏《漢書》不是無是非，而是把是非顛倒了。范蔚宗說他「輕仁義，賤守節」，一點也不冤枉。而他還要說司馬遷「博物洽聞」，而「不能以智免極刑」。但班氏自己也豈不死在牢獄裡。司馬遷乃是為李陵辯護，而班固則投在竇憲門下。兩兩相比，大不相同。但他總不失為有才、能文，也花了一輩子工夫，《漢書》也是寫得好。在魏晉南北朝唐初，群認《漢書》是部好書，正為那時人都講究做文章。後來韓柳古文興起，文學眼光不同，對《史》、《漢》高下看法亦不同。上引范蔚宗論《漢書》，本亦承之華嶠，而傅玄亦貶班固，謂其「論國體，則飾主缺而折忠臣。敘世教，則貴取容而賤直節，述時務，則謹辭章而略事實」，可見當時史家公論。范蔚宗也是不獲令終，死在監獄裡，但范蔚宗《後漢書》，在講仁義守節等事上，不知比《漢書》好了多少。又在《後漢書》班固的〈贊〉裡說：「彪識王命，固迷其紛。」班彪曾寫了一篇〈王命論〉，不為隗囂所屈，可說有見識，有操守。不如其子固，生值漢朝中興天下平治之際，對種種世俗紛紜還是看不清。把他們父子相比，也復恰如其分。總之，一位史學作者應有其自己之心胸與人格。對其所寫，有較高境界，較高情感的，而適為彼自己心胸所不能體會，不能領略，則在其筆下，自不能把此等事之深處高處曲曲達出，細細傳下。但如諸位此刻學歷史，不細讀一部書，只一條條地檢材料，則從前史家好處壞處都忽略了，都全不知道。如我此處所辨，也將被認為是一番不關痛癢之廢話，與史學無關。諸位若知做學問與讀書自有一條路，自己做人與論世也自有一番胸襟與眼光，讀史書自也無以例外。</p>
+<p>今再說班固《漢書》，略論考史方面，有他父親六十幾篇的傳，有劉歆之所編錄，選材大概是不差。論「寫史」，班氏文筆也不差。班氏所缺乃在不能「論史」。當知在考史寫史中，無不該有論史精神之滲入。如太史公寫〈孔子世家〉，主要並不在考與寫，而在其背後之論。我們讀《太史公書》，常會「有意乎其人」，有意乎他之所寫，如信陵君、平原君、聶政、荊軻，往往使人在百代之下想見其人。此因太史公能欣賞這許多人，寫來一若平平凡凡，而都能躍然紙上。一部《史記》，所以都見其為是活的，乃因書背後有一活的司馬遷存在。所以司馬遷《史記》，不僅是一部史學書、文學書，而還有其教育意義之存在。即如〈魏其武安侯列傳〉，這是在太史公當時武帝朝上兩位大臣，同時也是政敵，一升一沉，一得意，一失勢，事亦平凡，而太史公文章實在寫得好，顯因太史公自有一番真情滲入其間。又如他之對李陵，因而及於陵之祖父李廣，太史公付以極大同情，而對同時衛青之為大將軍者，反而對之漠然。今試問太史公在此等處，此一種情感是否要不得？他不僅作〈孔子世家〉、〈仲尼弟子列傳〉、〈孟子荀卿列傳〉等，在學術上的高下是非講得極清楚極正確，即對一普通人物普通事件，如魏其、武安兩人之相軋，在當時政治上也曾發生了大波瀾，其實從古今歷史大體言，也可說沒有什麼大關係，然而太史公這一篇〈魏其武安侯列傳〉，繪聲繪形，寫得真好。至於班固的《漢書》，往往有其事無其人。如說殺身成仁，其人之死事是有的，而其人之精神則沒有傳下。我們若用此種標準來讀此下的歷史，則真是差得又遠，還更不如班固。班固《漢書》贍而能詳，他把事情詳詳細細地都擺在那裡，又不亂七八糟，敘事得體，范蔚宗的批評正說準了他的好處。而范蔚宗《後漢書》長處自也不須多講。我們果能用這樣般的眼光來讀書，自能增長了自己的見識，抑且還提高了自己的人品。不是定要讀《論語》、《孟子》，纔知講道理，讀歷史則只講事情，其實在事情背後也還有一個道理。果自己無本領批評，諸位且莫儘看重近代人批評，也該知有古人早有的批評。即如比論太史公《史記》和班固《漢書》之高下，范蔚宗的批評豈不更值得我們之欣賞。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="史記.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="范曄後漢書和陳壽三國志.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="史記.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="范曄後漢書和陳壽三國志.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

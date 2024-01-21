@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>尚書 - Mdbook Template</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="弁言.html">弁言</a></li><li class="chapter-item expanded affix "><li class="part-title">通覽</li><li class="chapter-item expanded "><a href="中國史學名著.html"><strong aria-hidden="true">1.</strong> 中國史學名著</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="尚書.html" class="active"><strong aria-hidden="true">1.1.</strong> 尚書</a></li><li class="chapter-item expanded "><a href="春秋.html"><strong aria-hidden="true">1.2.</strong> 春秋</a></li><li class="chapter-item expanded "><a href="春秋三傳.html"><strong aria-hidden="true">1.3.</strong> 春秋三傳</a></li><li class="chapter-item expanded "><a href="左傳（附國語、國策）.html"><strong aria-hidden="true">1.4.</strong> 左傳（附國語、國策）</a></li><li class="chapter-item expanded "><a href="史記.html"><strong aria-hidden="true">1.5.</strong> 史記</a></li><li class="chapter-item expanded "><a href="漢書.html"><strong aria-hidden="true">1.6.</strong> 漢書</a></li><li class="chapter-item expanded "><a href="范曄後漢書和陳壽三國志.html"><strong aria-hidden="true">1.7.</strong> 范曄後漢書和陳壽三國志</a></li><li class="chapter-item expanded "><a href="綜論東漢到隋的史學演進.html"><strong aria-hidden="true">1.8.</strong> 綜論東漢到隋的史學演進</a></li><li class="chapter-item expanded "><a href="高僧傳、水經注、世說新語.html"><strong aria-hidden="true">1.9.</strong> 高僧傳、水經注、世說新語</a></li><li class="chapter-item expanded "><a href="劉知幾史通.html"><strong aria-hidden="true">1.10.</strong> 劉知幾史通</a></li><li class="chapter-item expanded "><a href="杜佑通典.html"><strong aria-hidden="true">1.11.</strong> 杜佑通典</a></li><li class="chapter-item expanded "><a href="歐陽脩新五代史與新唐書.html"><strong aria-hidden="true">1.12.</strong> 歐陽脩新五代史與新唐書</a></li><li class="chapter-item expanded "><a href="司馬光資治通鑑.html"><strong aria-hidden="true">1.13.</strong> 司馬光資治通鑑</a></li><li class="chapter-item expanded "><a href="朱子通鑑綱目與袁樞通鑑紀事本末.html"><strong aria-hidden="true">1.14.</strong> 朱子通鑑綱目與袁樞通鑑紀事本末</a></li><li class="chapter-item expanded "><a href="鄭樵通志.html"><strong aria-hidden="true">1.15.</strong> 鄭樵通志</a></li><li class="chapter-item expanded "><a href="馬端臨文獻通考.html"><strong aria-hidden="true">1.16.</strong> 馬端臨文獻通考</a></li><li class="chapter-item expanded "><a href="黃梨洲的明儒學案、全謝山的宋元學案.html"><strong aria-hidden="true">1.17.</strong> 黃梨洲的明儒學案、全謝山的宋元學案</a></li><li class="chapter-item expanded "><a href="從黃全兩學案講到章實齋文史通義.html"><strong aria-hidden="true">1.18.</strong> 從黃全兩學案講到章實齋文史通義</a></li><li class="chapter-item expanded "><a href="章實齋文史通義.html"><strong aria-hidden="true">1.19.</strong> 章實齋文史通義</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">天漢春秋</li><li class="chapter-item expanded affix "><li class="part-title">核心問題</li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Mdbook Template</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="尚-書"><a class="header" href="#尚-書">尚　書</a></h1>
+<p>今天第一講是《尚書》。《尚書》可說是中國最早的一部史學名著，而且也可說是中國第一部古書，中國還沒有比《尚書》更古的書留到現在。中國古代，有兩部古書，有韻的稱《詩》，沒有韻的稱《書》。「尚」者，遠古、上古之意，《尚書》就是一部上古的散文集。孔子以《詩》、《書》教弟子。孔子以前，春秋時代，賢大夫多讀《詩》、《書》，在《左傳》上可看到。孔子以後，像墨子、孟、荀，也都讀《詩》、《書》。故可說《尚書》是中國古代一部大家都讀的書。但在今天來講，《尚書》是一部很難讀的書。《尚書》分虞、夏、商、周四代。後人把夏、商、周稱三代，唐虞屬於五帝，因此《尚書》也可說是一部五帝三代之書。從唐虞到現在，該已四千多年；從西周以來，也有三千年以上，《尚書》真該說是一部中國的遠古書。漢代太學設立五經博士中有《尚書》，照現代話來講，《尚書》是那時一部國立大學規定的教科書。可是經過西漢到東漢四百年，實在這部《尚書》也並不能字字都講通。我們說漢代「去古未遠」，但這部《尚書》已沒有能完全講通，當然以後會更講不通。唐代韓昌黎說過，周誥殷盤，佶屈聱牙，他亦說是難讀了。直到清代，講經學最為有成績，訓詁、考據，工夫下得特別深，但清代兩百幾十年，這部《尚書》還是沒有能一字字的講通了。民國初年的王國維，是當時同輩行中對經學最有工夫的人，但也就說《尚書》不能盡通。可見我們今天來讀《尚書》，只求得其大義便好，不可能逐字逐句都要講得通。我有一位朋友顧頡剛，同在大陸的時候，他就想為《尚書》做一番現代白話文的解註和翻譯。我想這工作會是徒勞無功的。據說此刻他翻譯的《尚書》已經出版，但我沒有看過。無論如何，他不能把《尚書》裡難解的問題都解決了，是必然的。古書不易通，並不是說拿白話一翻就可通了。註解已難，拿白話文來翻譯古文，其事更難，並不是幾千年前人說的話都能用今天的白話就能恰好翻得出。這些都是做學問走錯了路的，暫不講這一問題。</p>
+<p>第二、我們要知《尚書》是一部多問題的書。文字問題外，便是本子問題，即是《尚書》的真偽問題。《尚書》有兩種本子，一種叫今文《尚書》，一種叫古文《尚書》。今天我們只說今文《尚書》是真的，而古文《尚書》則是假的，我今天且先把此問題簡單一講。《尚書》究有多少篇？舊說有一百篇，此說不可靠。當秦始皇焚書時，有一博士伏生，他就收藏著一部《尚書》，回到家，裝進壁裡邊，偷偷地保留下來。秦亡漢興，重覓《尚書》，只知道有伏生的一部。那時伏生還在，快一百歲，老了。他是山東人，不能叫他從山東到長安去，因此政府特地派了一位有學問根柢的晁錯到他家去求此書。但伏生已經不大能講話，他和晁錯雙方口音有講不明白處，由伏生一女兒在旁作翻譯。這樣幾個月，晁錯就帶著這部《尚書》回到政府。這一部《尚書》此下稱做伏生《尚書》──因是從伏生家裡得到的。那時中國文字也不斷地在變。古代是寫篆體，秦代、漢代，普通都寫隸體。篆體寫的叫古文，拿那時通行的隸書寫的叫今文。伏生《尚書》本是一部篆體、古文的，不易認識，伏生就告訴晁錯改寫成隸書，因此伏生《尚書》同時又稱今文《尚書》。漢廷把來設立博士，傳授學生，所以這部《尚書》我們也可為它定名稱做博士官《尚書》。此是當時《尚書》的第一種本子。</p>
+<p>後來武帝時有魯共王為蓋造房子，弄壞了孔子舊居的牆壁，在壁中發現了許多古書。大概也是因秦代焚書，孔家後人就把很多書藏在壁裡，此刻發現了，當然為孔子後人所有，此人便是孔安國，在武帝朝作官。剛才講的晁錯到伏生家中求《尚書》，那是漢景帝時的事，此刻又出現這一部《尚書》，則稱做孔壁《尚書》，亦稱孔安國《尚書》，亦可名為古文《尚書》，因它都用戰國以前所用的篆體書寫，不像伏生《尚書》已經改寫成今文，所以這一部則稱做古文《尚書》。此書未立博士，即是當時朝廷博士官不用來教學生。</p>
+<p>孔安國《尚書》和伏生《尚書》有什麼不同呢？伏生《尚書》只有二十八篇，而孔安國《尚書》多了十六篇，共四十四篇。其二十八篇中，文字亦略有不同。到了西漢末劉歆移書上太常博士，曾請求把好幾部古書增列博士，其中就有古文《尚書》，當時沒有通過。直到東漢，這部《尚書》始終沒有列為學官，只在社會學術界私下流行，並未在國立大學內成為一份正式的教科書。漢末大亂，一切書籍多散失，此書也不見了。到了東晉，忽然有人獻上《尚書》，稱是孔安國本，大家說是古文《尚書》失而復得。以後便把《尚書》兩個本子今文古文合而為一。如唐代初年孔穎達編《五經正義》中的《尚書》，就是今文古文合而為一了。再以後直到南宋朱子，對此《尚書》發生了疑問。他說：為何這部《尚書》中間伏生《尚書》都難懂，而孔安國《尚書》卻又都是容易明白的？此中理由不可講，朱子遂發生了懷疑，不過朱子也沒有深進一步作研究。待到朱子學生蔡沈，寫了一部《書集傳》，和朱子自己寫的《詩集傳》，到了元代，成為科舉考試所必治之書。蔡沈《書集傳》裡面在《尚書》每一篇題目之下都注明了「今文古文皆有」，或「今文無古文有」字樣。「今文古文皆有」這就是今文《尚書》。「今文無古文有」的，這就是古文《尚書》。蔡沈乃承朱子意，把一部《尚書》重新分別開來，使人知道《尚書》裡有這今、古文的問題。於是下到元代吳澄、明代梅鷟，開始出來懷疑古文《尚書》是假的，靠不住。這一問題要到清代初年，閻若璩（百詩）才開始十足證明了從東晉以後的所謂古文《尚書》是一部假書，不是真的孔安國《尚書》。他寫了一書名《古文尚書疏證》，「疏證」就是辨偽之義，此事纔得成為定論。在他稍後有惠棟，也寫了一部《古文尚書考》，同辨古文《尚書》之偽。這是在近代學術史上所謂辨偽問題上一個極大的發現。這是中國學術史上一個驚天動地的大功績。諸位不要認為自己學歷史，可以不學經學。或說學近代史，可以不學古代。或說學社會史、政治史，可以不治學術史。當知做學問人，大家該知道的我們總該知道。學術上驚天動地的大事件，大家都知，我獨不知，孤陋寡聞，總對自己研究有妨害。我們該知，《尚書》字句不能全通，此並無害。但前人辨今古文真偽，已得結論，其大綱節所在，若亦全不理會，此大不可。諸位莫誤認為學問必待創闢，須能承續前人成績，此亦至要。今天諸位做學問，都知看重材料考據。但一堆材料在這裡，怎樣去考，總該懂得一些艱苦門道的。如像古文《尚書》，諸位若把閻、惠的書拿來細翻一遍，便知牽涉太多，儘有麻煩。我們把前人已有定論的來潛心研求，自可長自己見識，訓練自己工夫。即如閻百詩寫此一書，同時便有毛奇齡寫了一本《古文尚書冤詞》來作駁議。毛氏著述極多，博學善辯，那究誰是誰非呢？此須把閻、毛兩家書合來細看。當然我們現在都信閻百詩是對了，但仍有許多話講錯。毛西河的話，當然不為後人所信，但此書至今尚存，仍可一讀。這裡面還有較複雜的問題存在，我所著《近三百年學術史》，曾對此事講了很多清儒所未講到的話。可見學問實是無窮，已成定論的大問題之內，仍可有小問題。</p>
+<p>現在我們對這問題暫停不論，只要知《尚書》有兩種本子，古文《尚書》是假的便夠。諸位若讀《尚書》，讀蔡沈《集傳》最容易了。《史記》上說伏生《尚書》二十八篇，古文比今文多十六篇，十六加二十八只有四十四篇，而現在的《尚書》是五十八篇，這裡又有問題。以後我每次講一題目，只講一大概，但諸位不能聽了便算。如此不僅記不得，絕對要忘，而且記得了也沒有用。當知做學問本來是要工夫的，沒有不花工夫的學問。諸位每做學問，好問方法，做學問最大第一個方法就是肯花工夫。一學者花十年、二十年、一輩子工夫來解決一問題，本是尋常本分之事。或許諸位現在沒有工夫，不妨留待完成碩士博士論文，職位解決了，再來讀書，再用工夫。</p>
+<p>現在再回頭來講，《尚書》有今文古文，古文《尚書》是假的，只有二十八篇今文《尚書》伏生傳下的是真的。孔安國所傳本也是真《尚書》，可是後來掉了。孔安國《尚書》並不假，只因為不立博士官，流傳不多，就亡失了。到東晉由梅賾所獻本才是假《尚書》。但我此刻要講另一問題，那今文《尚書》二十八篇也不完全是真的。講到此，就要講到所謂辨古書之真偽這一問題上去。古書有真有偽，我們該懂得分辨。這不是今天的新問題，從來學者都注意此一問題。依照我們現在眼光來看，我們該進一步說，今文《尚書》也未必全是真，也多假的。可惜當前沒有人能進一步來研究此問題。這因民初以來，一輩講學問的講過了頭，即如辨偽，像顧頡剛的《古史辨》，他認為夏禹也無此人，這太講過頭去了。其實也不該專怪顧頡剛，在前清末年早有講過了頭的，像康有為，著《新學偽經考》以及《孔子改制考》。照康有為講法，所謂經學漢學，其實只是新莽之學。「新」是王莽的朝代名。清儒都講漢學，康有為卻說是新學，經則都是偽經，由劉歆替王莽偽造。此書出版後，經清政府禁了，把書銷毀，不准發行。但民國以來，大家喜歡講新，就看重了這部書。顧頡剛《古史辨》就是承此而來。後來康有為從事復辟，失敗了。但這只是康有為政治上的失敗。他在學術上並未失敗。他跑進北平東交民巷荷蘭公使館，就在裡面叫人再翻印他的《新學偽經考》，果然在北平市上還有很多人買他這書。他在學術思想上還是領導著一個新的方向，然而辨偽過了頭，其實是荒唐的。《孔子改制考》更荒唐，說孔子所說的以前，只是孔子託古改制，孔子自要創造一番新制度，而把來假託之於古代。這樣一講，全部中國歷史，第一個是孔子，第二個便是劉歆，卻都是造謠作假的。這樣的講下去，講到夏禹是一條蟲，纔引起人家討厭。辨偽之學，便不再講了。實際上，辨偽不該過分，但有許多真偽還是該辨。如說《尚書》，我覺得即在今文二十八篇裡還有很多不可信。如《尚書》第一篇──〈堯典〉。近代有人寫文章，辯護〈堯典〉裡所講天文如「日中星鳥，日永星火，宵中星虛，日短星昴」等類，這些二十八宿中的鳥星、火星、虛星、昴星，它們在天上的位置是要轉移的。據現在天文學考據〈堯典〉所云，卻是中國古代堯舜時代的天文；至戰國時候，則並不然。據此證明〈堯典〉不假。大概這一套學問，在日本比中國研究的人多，因一般的科學知識，日本比中國發達，中國學者在此方面還是根據日本人講法。可是在我認為，科學知識比較專門，中國古人稱之為疇人之學，譬如種田，父親種的田兒子繼續種下去。古人研究天文學曆法，此種學問，大概都是世襲的專家之學，父親傳給兒子，故又稱為疇人之學。疇人之學也許可以是先生傳學生。堯舜時的天文，也可以是從古傳下，或在文字上，或在口傳上。我們不能只根據這一點知識便認〈堯典〉全篇可信，只能說〈堯典〉中這些話有來源。其他的話，並不一定全可信。如堯傳天下於舜，舜命禹作司空，同時兼百揆（就是兼宰相之職）；命棄作后稷，這就是農業大臣；命契掌五教，這是教育大臣；命皋陶作士，是司法大臣，也兼掌了兵；命垂作共工，是工業部大臣；命益作虞，是畜牧部大臣；命伯夷典禮；命夔典樂；命龍叫他作納言，掌皇帝命令。共凡九官，這一點便大大靠不住。首先是年代問題。禹是夏代之祖，契是商代之祖，棄是周代之祖，此刻都在舜下面變成同時的同僚。這且不講。特別重要的，舜時已有一個宰相，又有管土地、管農業、管教育、管司法、管工業、管畜牧、管樂、管納言的，共九職，此是中國古代一個極像樣、極有組織、有規模的行政院。倘使在堯時中國的中央政府已有那麼九部大臣，為何下面夏、商、周三代，乃至於春秋、戰國下及秦、漢都沒有？這不是歷史上一大退步嗎？舜時大臣分九職，為什麼下面從來沒有？單據這一點，從舜到秦兩千年的歷史，變成無法講、講不通。所以我只能說〈堯典〉是戰國人偽造，舜官九職，是戰國末年人一個理想政府。他們懂得政府裡該有管教育、管農業、管司法、管音樂的等等官，那是一番很高的理想，這正如康有為所說的託古改制。不過康有為不能拿這話來講孔子，說孔子以前，根本沒有堯舜，沒有《尚書》，沒有周公。但託古改制確是有的，先秦諸子中多有，儒家中間也有，但不能說過了頭。諸位當知，讀史不能辨偽，便會有許多說不通處。但辨偽工夫中寓有甚深義理，不能輕易妄肆疑辨。如康有為、顧頡剛辨偽疑古過了頭，又更多說不通。上面是說堯舜時代不能有這樣一個政府，像〈堯典〉中所說，這些材料不可信，只有說到中國古代的天文或可信。</p>
+<p>我試再舉一小例，如〈堯典〉篇首有「玄德升聞」四字，舜之德被堯所知，但為什麼稱「玄德」呢？「玄德」兩字連用，在古書中極少有，只在《老子》書裡才說：「同出而異名，同謂之玄。玄之又玄，眾妙之門。」這「玄德」二字，只可用《老子》書來講，不能用孔孟書來講。下面魏晉時代講老莊之學的就叫做「玄學」，為何在〈堯典〉裡用此玄德兩字，這便可疑是戰國末年人看過《老子》書，來偽撰〈堯典〉，才用了「玄德」二字。我們可憑文字使用來衡定年代，如我們此刻好說中國文化字樣，但前清末年人斷不會用此四字。</p>
+<p>〈堯典〉以外，再講到〈禹貢〉，這是講中國古代地理一部最重要的書，其實也決不是夏禹時代的書，而應是戰國時代的書。如〈禹貢〉裡劃分荊州、兗州、豫州等九州，如何此「九州」字樣不見於夏代、商代、周代，直到春秋時代也沒有，到了戰國初期還沒有。什麼人把此禹分九州的制度廢掉的呢？為何有此九州而什麼書上從來沒有用這「九州」的字樣呢？那就又講不通。只舉此一例，便見〈禹貢〉不是一篇可靠的書，它是一篇晚出書，我此刻不能詳講。在我只認為《尚書》中最可靠的便是〈西周書〉，〈虞〉、〈夏〉、〈商書〉都有問題，只有〈西周書〉或許才是中國《尚書》的原始材料、原始成分。下到東周也有書，但也恐是後人添進。主要真可信的是〈西周書〉。若使我們把一部《尚書》即今文二十八篇再分析到只剩一部〈西周書〉了，那麼我們也須對此十幾篇文章有一個簡單而明晰的瞭解。我曾寫過一篇文章，題名〈西周書文體辨〉，便是要把此來看中國最古歷史文體是怎樣寫出的。現在此一問題，我也不想同諸位詳講。但到此另有一重要問題，便是要講到書背後的人。既然講到〈西周書〉，那麼〈西周書〉中顯見有一重要人物躍然欲出，那便是周公。〈西周書〉中有很多文章便是周公所作，或是周公同時人或其手下人所作。要之，在當時，周公在此集團中，並傳至此後，有大影響。孔子一生崇拜周公。而我們要來研究周公的思想理論及其政治設施，當然這十幾篇〈西周書〉成為了主要材料。我在上一堂已告訴諸位，做學問當從一項項的材料，進而研究到一部部的書，而在每一部書的背後，必然當注意到作者其人。倘使這部書真有價值，不專是些材料的話，則書的背後一定會有一個人。此刻我們說中國第一部最早的史學名著就是〈西周書〉，而〈西周書〉的重要作者，即發明此體裁來寫出這東西的就是周公。當然可以有幾個人，不專是周公一人。那諸位試拿此意見去讀〈西周書〉，看此許多篇書之內容是否一篇一篇的分裂著，各有不同的體裁、不同的意見，和不同的言論，抑或可以看待是一套。讓我姑舉〈西周書〉中〈召誥〉一段話來說，這顯然是召公說的，不是周公說的。它篇中說：「皇天上帝，改厥元子茲大國殷之命。惟王受命，無疆惟休，亦無疆惟恤。嗚呼！曷其奈何弗敬。」此是說皇天上帝把它元子改了一個，從前大國殷之命，現在給你成王的手了，商代變成了周代，好的固是沒有完，可憂的也同樣沒有完，你要當心呀。下文又云：「古先民有夏，……今時既墜厥命。今相有殷，……今時既墜厥命。……我不可不監于有夏，亦不可不監于有殷。……今王嗣受厥命，我亦惟茲二國命。」這是說古代中國有一夏朝，上帝不喜歡它了，它不能再做王朝共主；接著又有殷，現在也不能做這王朝共主。下面才接到我們了。我們獲得此天命，也正如夏殷一般。那些話，在〈西周書〉裡屢見不已。首先可知中國古時有夏商周三代，那是真歷史。現在我們雖因地下發掘得了商代的龜甲文，而沒有見到夏代的，卻不該說有沒有夏代成了問題。只能說我們沒見到夏代的文字，不能因此說沒有了夏代。西周初年，周公、召公就講過。我們固然承認龜甲文，但我們也須承認〈西周書〉。至於把王朝共主稱為「天子」，認為是上帝命他來作天下共主，這個天命不給一族一人，給了夏，夏不好，又給商。商不好，又給周。周再不好，當又另給別人。故說無疆惟休，亦是無疆惟恤。當知我上引一段話，固是召公所說，其實乃是周公所說。在當時，周公可以涵攝召公，召公也有時可以代表周公。周公是當時一位名世的聖人。讀〈西周書〉，便該領略到西周精神，同時便該領略到周公精神。一段歷史的背後，必有一番精神，這一番精神，可以表現在一人或某幾人身上，由此一人或幾人提出而發皇，而又直傳到下代後世。孔子一生崇拜周公，主要應該在此等處認取。若我們只把十幾篇〈西周書〉當一堆材料看，不能看到整部書之結集和其背後之時代精神與人物精神，即是失卻了其意義和價值。</p>
+<p>周公的天命論，周公的共主論，影響後世甚大。周公首先提出天命無常的觀點，從前天命在夏，夏人不要了，天命又在商，後來又給周，但天命給周是為文王，不為武王。天命所與，只在文德，不在武功。這一層在〈西周書〉裡也可看得明白。明明是周武王打了天下，但周公不那樣說，定說是上帝為周有了個文王，才給周以大命。可是周公這番思想和理論，其實也並沒有說錯，而且可以說在中國後代歷史上也一向發生了大影響。因此可知我們研究歷史，更重要的在應懂得歷史裡邊的人。沒有人，不會有歷史。從前歷史留下一堆材料，都成為死歷史。今天諸位只看重歷史上一堆堆材料或一件件事，卻不看重歷史上一個個人，這將只看見了歷史遺骸，卻不見了歷史靈魂。</p>
+<p>現在總結說，中國第一部大的史學名著應該是《尚書》；準確言之，應該是〈西周書〉。〈西周書〉的主要中心人物是周公，在中國歷史上影響著幾千年。我今天所講，將到此為止。下面第二部史學名著我將講到孔子的《春秋》，孔子《春秋》精神便從周公與〈西周書〉中來。如此而下，周公、孔子，不僅為中國史學主要的創始人，也為中國文化主要的創始人。我不認為中國從唐虞時代就有了歷史書；下至商代，可能有，但如今文《尚書》中〈盤庚〉篇之類，還只能當史料看。若論中國像樣的史書，則應從西周開始，而且又是從周公開始。其餘有關《尚書》的，尚有些話，來不及講，應在下一堂補講。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="中國史學名著.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="春秋.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="中國史學名著.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="春秋.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>左傳（附國語、國策） - Mdbook Template</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="弁言.html">弁言</a></li><li class="chapter-item expanded affix "><li class="part-title">通覽</li><li class="chapter-item expanded "><a href="中國史學名著.html"><strong aria-hidden="true">1.</strong> 中國史學名著</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="尚書.html"><strong aria-hidden="true">1.1.</strong> 尚書</a></li><li class="chapter-item expanded "><a href="春秋.html"><strong aria-hidden="true">1.2.</strong> 春秋</a></li><li class="chapter-item expanded "><a href="春秋三傳.html"><strong aria-hidden="true">1.3.</strong> 春秋三傳</a></li><li class="chapter-item expanded "><a href="左傳（附國語、國策）.html" class="active"><strong aria-hidden="true">1.4.</strong> 左傳（附國語、國策）</a></li><li class="chapter-item expanded "><a href="史記.html"><strong aria-hidden="true">1.5.</strong> 史記</a></li><li class="chapter-item expanded "><a href="漢書.html"><strong aria-hidden="true">1.6.</strong> 漢書</a></li><li class="chapter-item expanded "><a href="范曄後漢書和陳壽三國志.html"><strong aria-hidden="true">1.7.</strong> 范曄後漢書和陳壽三國志</a></li><li class="chapter-item expanded "><a href="綜論東漢到隋的史學演進.html"><strong aria-hidden="true">1.8.</strong> 綜論東漢到隋的史學演進</a></li><li class="chapter-item expanded "><a href="高僧傳、水經注、世說新語.html"><strong aria-hidden="true">1.9.</strong> 高僧傳、水經注、世說新語</a></li><li class="chapter-item expanded "><a href="劉知幾史通.html"><strong aria-hidden="true">1.10.</strong> 劉知幾史通</a></li><li class="chapter-item expanded "><a href="杜佑通典.html"><strong aria-hidden="true">1.11.</strong> 杜佑通典</a></li><li class="chapter-item expanded "><a href="歐陽脩新五代史與新唐書.html"><strong aria-hidden="true">1.12.</strong> 歐陽脩新五代史與新唐書</a></li><li class="chapter-item expanded "><a href="司馬光資治通鑑.html"><strong aria-hidden="true">1.13.</strong> 司馬光資治通鑑</a></li><li class="chapter-item expanded "><a href="朱子通鑑綱目與袁樞通鑑紀事本末.html"><strong aria-hidden="true">1.14.</strong> 朱子通鑑綱目與袁樞通鑑紀事本末</a></li><li class="chapter-item expanded "><a href="鄭樵通志.html"><strong aria-hidden="true">1.15.</strong> 鄭樵通志</a></li><li class="chapter-item expanded "><a href="馬端臨文獻通考.html"><strong aria-hidden="true">1.16.</strong> 馬端臨文獻通考</a></li><li class="chapter-item expanded "><a href="黃梨洲的明儒學案、全謝山的宋元學案.html"><strong aria-hidden="true">1.17.</strong> 黃梨洲的明儒學案、全謝山的宋元學案</a></li><li class="chapter-item expanded "><a href="從黃全兩學案講到章實齋文史通義.html"><strong aria-hidden="true">1.18.</strong> 從黃全兩學案講到章實齋文史通義</a></li><li class="chapter-item expanded "><a href="章實齋文史通義.html"><strong aria-hidden="true">1.19.</strong> 章實齋文史通義</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">天漢春秋</li><li class="chapter-item expanded affix "><li class="part-title">核心問題</li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Mdbook Template</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="左傳附國語國策"><a class="header" href="#左傳附國語國策">左傳（附國語、國策）</a></h1>
+<p>《左傳》在古代當它是一部經書，因《春秋》是六經之一，《春秋》有三傳，便也算是經。所以在九經、十三經之內都有《左傳》。從前人對《左傳》所討論的問題：</p>
+<p>（一）《左傳》是不是傳《春秋》？這是個大問題。漢代今文學家說《左氏》不傳《春秋》，因此它不立學官。</p>
+<p>（二）《左傳》是不是左丘明所作？左丘明是孔子同時人，若是左丘明作《左傳》，便是傳孔子的《春秋》。既說《左氏》不傳《春秋》，那便未必就是左丘明作。</p>
+<p>這兩個問題，我們在上一堂都已講過。此刻我們認為《左傳》並不是左丘明作，《左傳》成書應在戰國，要到秦孝公時，距離孔子、左丘明已經很遠，而《左傳》或許和吳起有關係，這些都在上一堂講過。但我們也可照宋代人意見：認為《左傳》傳的是《春秋》之事，並不是傳《春秋》之義。中間如魯、齊、宋、鄭、晉、衛、楚、秦，各國的事都有，都包括在這部《左傳》裡。所以古代人乃至在民國以前人，只爭《左傳》是不是傳《春秋》，所謂《左傳》真偽問題，僅是這一個問題，卻沒有懷疑到《左傳》裡所載的事，即《左傳》的內容，即是它的歷史價值，這個從來沒有人懷疑過。只爭《左傳》不是經學，並沒有爭《左傳》所載二百四十年的事是不是歷史。如講天文曆法，《左傳》裡所記日蝕、月蝕種種，都是正確的。特別如《左傳》裡晉國的曆法同周王朝的曆法以及《春秋》裡魯國的曆法錯了兩個月。在《孟子》書裡已說過。周代曆法是把現在的十一月當正月，夏曆是把現在的正月當正月。晉用夏曆，因此《左傳》裡講到晉國的事情同《春秋》錯了兩個月。有的《春秋》在下一年，而《左傳》還在上一年。晉國人的十一月，那已是周代和魯國的新年了。即此一點，就可證明《左傳》史料有來源，也可證明我們以前所講夏商周三代曆法不同，《左傳》裡便有明據。到秦代把十月當正月，更早了一個月。漢代以後才改過來，沿用夏曆。我們只就《左傳》，便知古代山西人的曆法，就是夏曆，因此我們在《左傳》裡可以研究很多古代的天文學。</p>
+<p>第二，我們講到地理。中國歷史悠久，疆土廣大，「沿革地理」是一門特別重要的學問。普通認為〈禹貢〉是第一部講中國地理沿革的書，第二部是《漢書．地理志》。可是〈禹貢〉實在是戰國時人所寫，而《春秋左傳》裡的地理，因那時有一兩百個諸侯，《史記．十二諸侯年表》便舉了特別大的十二個，這些叫做「國」。國以外還有「邑」，這些邑，就像後來《水滸傳》裡的史家莊、扈家莊、祝家莊之類。雖不是一個城，卻是一個邑。《左傳》裡所記邑更多。大的稱都，小的稱邑，若我們把《左傳》裡的諸侯和都邑各個地名都考究，那工作便很繁重。杜預注便成為後人講沿革地理一項重要的參考材料。此是一項專門學問，清代人寫「《左傳》地名考」的就有好幾家。那麼我們可以說，要講中國的沿革地理，第一部書實是《左傳》。地理是歷史的舞臺，歷史上一切活動都分布在地面上。我們只要看春秋時代的地名，就可想像到古代的中國已經相當的大，差不多黃河流域直到淮水流域乃至大江以北，中國大部分區域都已包括在內。</p>
+<p>第三，我們要講到歷史裡的氏族。大家知道，春秋時代是中國貴族封建的時代。每一個國家，都由一氏族組成。魯、衛、齊、晉、宋、鄭各國，他們的氏族各不同。昔人有《春秋氏族譜》，我們要研究春秋時代的大家族，及當時的貴族生活，《左傳》裡講得很詳細。</p>
+<p>第四，講到政治制度，《左傳》裡各國制度亦各不同。譬如官制（政府組織）、兵制（軍隊組織）、田制（賦稅制度）等。將來歷史裡一應制度、官制、兵制、田制等，都有淵源，特別重要而且可考的則在春秋時代。</p>
+<p>第五，從西周周公一路傳下來的所謂朝聘盟會之制，這是列國與周天子乃至列國相互間的一種「禮」。現在我們也可稱之為「制度」。在清代末年曾有一本書，那是中國人到了外國去，研究了歐洲人的所謂國際公法，回頭來把《左傳》裡講的朝聘盟會種種不成文法，也當是當時的國際公法，寫了一本書稱《春秋時代的國際公法》。我在北平時曾看過這書，可惜現在丟了，那書的作者我也忘了。而那書流傳不多，也無從再覓。十年前我到美國，去舊金山，那裡有一位華僑，他特地同我談起，他正在要寫一本春秋時代的國際公法，我當時曾極力鼓勵他努力寫，至今已過十年，沒有同他通過信，不知他此書寫成沒有。可是這個題目卻極值得寫。就這一點，也可想像我們中國文化之偉大，在兩千五百多年前，中國已有一套很像樣的國際公法了。雖和後來歐洲人的國際公法不同，然而至少是各有長短，各有特色。下面我們講到《左傳》裡的人物。</p>
+<p>《左傳》裡的「人」，稱呼極不同，有的稱名，有的稱號，有的稱官名，還有其他不同的稱呼。實際上不僅古代如此，如我們讀宋代的理學，每一理學家有幾個名字的，如程顥，字伯淳，號明道，至少有三個稱呼。又如朱熹，字晦庵，號考亭；陸九淵，字子靜，號象山，每個人都有好幾個名稱。而中國人的名號，又都在訓詁上配合起來，如三國時諸葛亮，字孔明；魯肅，字子敬，名字相配，這習慣就從春秋時代起了。清代就有人專門研究春秋時代人的名號，從這裡有很多的訓詁問題可以發現。尤其是當時各國的賢卿大夫，他們的言論、行事，都值得我們研究。</p>
+<p>下面再講大家知道的春秋時代《左傳》裡所記載的軍事。如晉楚兩國三次大戰爭、城濮之戰、邲之戰、鄢陵之戰，又如晉和齊的鞍之戰，還有其他各種的大小戰爭，《左傳》裡記載戰爭的文章都寫得好，在軍事學上也有極大考究。又如講到當時各國的外交辭令，《左傳》裡記下的也都是了不得，常為後人傳誦。</p>
+<p>再講到當時的各種禮俗、信仰，有關社會史方面的，也都重要。清代有一學者汪中（容甫），他有一本文集《述學》，裡面有一篇講到春秋時代種種禮俗，如他們講的天道、鬼神、災祥（災異同祥瑞）、卜筮、夢、其他，都是極有趣而且亦有參考之用。汪容甫根據《左傳》，說這些都是當時的實際情形，可見當時的社會風氣。到了戰國以後，中國社會大變，這許多所謂天道、鬼神、災祥、卜筮、夢等大批在《左傳》裡很多的記載，而戰國以後便慢慢少了，也可說是中國歷史文化上一大變遷，大進步。也可說是春秋當時中國社會的一個特殊形態，中國人心理上一些特殊信仰。</p>
+<p>此外，我們還可以講到春秋時代的一切食貨經濟、工商業情形。</p>
+<p>其次，《左傳》裡又講到許多蠻夷戎狄，後人所謂的四裔。諸位當知，研究任何一代的歷史，都有這幾個項目，如天文，如地理，如家族氏姓，如制度，如人物，如軍事，如外交，如食貨經濟、社會禮俗，又如中國和四裔的關係等，這是歷史的一個大體段，而《左傳》都有了。所以《左傳》已經是中國一部很像樣的歷史。諸位倘使要研究這許多問題，清初有顧棟高寫一書，名《春秋大事表》，這是指的春秋時代，所根據的就是《左傳》的內容，他分門別類地各為製成一張一張的表，而加以敘述。這書極偉大，我們正可根據他的方法，來寫《宋代大事表》、《明代大事表》等。顧棟高是花了一輩子工夫在這兩百四十年的事情上的。</p>
+<p>我今試問諸位，哪個人可能隨便來偽造一部《左傳》？他將如何般來憑空偽造？又偽造了有什麼作用？所以我說：《左傳》是中國最先第一部最詳密的編年史。專講歷史價值，孔子《春秋》，可說還遠在《左傳》之下。若我們要研究春秋時代的歷史，而我們專來研究孔子《春秋》，將使我們根本不清楚，所能曉得的將很簡單，所以我們一定要讀《左傳》。但如此講來，孔子《春秋》又有什麼價值啊？這已在上一堂講過。但上一堂所講，和此一堂所講，並不相衝突。我們此刻說，除非是一大史學家，將不能編出一部《左傳》，而《左傳》也確實是一部偉大的史學書。我認為我們要研究古代的中國史，我們便該拿這部《左傳》做我們研究的一個基準。即由此上來建立我們一個基本的標準的看法。</p>
+<p>我們研究歷史，要懂得一個看法。我們研究中國古代史，五帝、堯舜、夏商周三代一路下來，我們該怎樣去看？我說：我們該先研究《左傳》。因《左傳》講的詳細。如諸位研究〈西周書〉，這裡周公講幾句，那裡召公講幾句，太簡單了，再往上去更簡單，我們把握不住，無法研究。而《左傳》是一部極精詳極完備的記載，我們能把這兩百四十年認識了，根據這認識往上推，我們便可研究中國古代史。</p>
+<p>如我講今文《尚書》也有假的，〈堯典〉是假的，〈禹貢〉是假的，為何如此判斷？只要讀《左傳》，把《左傳》裡各國的政府組織，官制等都弄清楚，那麼怎能在兩千年前的中國早有了這樣進步的舜的時代的政府組織呢？為什麼四千年前中國政府高明到這樣，在什麼時候又退步墮落下來，到春秋時代又是這個樣子的呢？我們應有一講法，即是說這〈堯典〉裡講的靠不住，〈堯典〉是戰國人的偽書。又如講〈禹貢〉，我們看過全部《左傳》裡的地理，怎麼那時人沒有〈禹貢〉九州觀念呢？我們便可判〈禹貢〉是偽書。</p>
+<p>又如我們今天講，春秋時代是一個封建社會，這話便有些不通。諸位讀西洋史，他們的中古時期封建社會有沒有國家組織呢？那時還沒有像法國、英國等現代國家，但我們春秋時代有晉、齊、秦、楚，許多國家了。西洋史上要封建社會過了才有現代國家興起，然而西洋的現代國家，直到今天，英國還是英國，法國還是法國，沒有更在其上的一個統一政府。西洋史上的統一政府，乃在封建社會以前的羅馬帝國。可是中國便不同。春秋時代已經有了很高明的國際公法，又有一個周天子在上面，那麼我們怎可說春秋時代是個封建社會呢？所以我只講中國古代是有封建政治，而並非封建社會。西方人的封建社會，是在無政府狀態下的東西，和我們完全不同。我此刻這樣講，諸位不要認為很簡單，在此六十年來，似乎只我一人這樣講，在我認為講得很清楚明白，只為我讀了一部《左傳》，《左傳》是我討論古史一個基準的觀點。</p>
+<p>我再舉一書，諸位都知有郭沫若，他寫一書名《中國古代社會研究》，他根據《易經》，根據龜甲文，說中國那時還是一個漁獵社會，正從漁獵社會漸進到畜牧社會去。在龜甲文裡，一次打獵捉到多少豬或多少羊，所以說那時主要生活還是在漁獵時代。但這話也有些講不通。社會從漁獵進化到畜牧，再從畜牧進化到耕稼，進化到有大貴族，有許多像樣的諸侯，有中央統一政府，那不是簡單一回事。請問中國人什麼時候纔一下子一跳，而進步到《左傳》這個時代的呢？我們一方面要講中國人不進步，一方面卻把中國人的進步又看得太易太快，出乎這個世界人類歷史演進的常軌之外了。諸位儘看他引了許多龜甲文，許多《易經》上的話，看他有證有據，但拿一部《左傳》來一看，就知雙方不能相通。因此我們要研究中國古史，應該把《左傳》做一個我們對歷史的基本知識，即一個標準的看法。從此推到上邊去，可以不會大錯。</p>
+<p>再講到下面，我可以告訴諸位，諸位定該研究一下古代史，才能懂得下面的歷史。古代史也可把來作研究下面歷史的一個基準觀點。我們此刻研究秦漢以後，也多有看錯的，毛病在哪裡？因為在上面沒有弄清楚。要弄清楚上面，最好還是讀《左傳》。我們要研究古史，研究西周，研究商和夏，先要有個準備工作，有一個靠得住的基礎和標準，那麼一定要看《左傳》。諸位要讀二十四史，通常我們說，先讀《史記》、《漢書》，或者再加上《後漢書》、《三國志》，合稱四史，先把四史熟了，下邊有辦法。但《左傳》又是讀四史之基準。諸位莫說我要研究宋史，先去讀《左傳》有什麼用？但研究宋史也要有個基準，從上向下。如諸位要進我這個客廳來聽課，定要從大門進來，不能說這和我不相干。我們今天的錯誤，在我們先沒有一個做學問的基準或說立腳點。</p>
+<p>此下我繼續提出兩書，一是《國語》，一是《國策》。前人多謂《國語》和《左傳》同出左丘明，故《左傳》稱「內傳」，《國語》稱「外傳」，此說殊不可信。《國語》分國記載，如後代《十六國春秋》之類，和《左傳》編年體裁不同，故讀《國語》亦應分國來讀。如〈魯語〉和〈齊語〉不同，大抵鄒魯儒生多拘謹保守，故多經生儒家言。而〈齊語〉則如《孟子》所說：「子誠齊人也，知管仲、晏子而已矣。」今〈齊語〉只講管仲，與《管子》書裡材料相通。〈晉語〉則出三晉之士，韓、趙、魏三家，比較上重功利法制與縱橫思想。最早當淵源於子夏，後來演變出吳起。當然不能說子夏便是法家縱橫家之祖，可是三晉雖則多產法家縱橫家，而論其最先原始，則起於儒家。那裡的儒家所講，則比較更近於史學。亦可說孔子的七十弟子後學在鄒魯本鄉的，還都是儒家傳統，而他們慢慢的傳到三晉，就漸變為功利法制，乃至縱橫這幾派。其時如宋國，又和其他國家不同。宋是商代之後，春秋時有一個宋襄公，想把講仁義來霸諸侯，被楚國打敗。後來又有一個向戌，召開弭兵大會，來求當時的全世界大和平。那些都是宋國人攪的花樣。更後來有墨子，他亦應是商代之後，他思想亦較特別。古人說：商尚鬼，商代人是帶有一種宗教迷信的。《墨子》書裡便有〈天志〉、〈明鬼〉諸篇，不脫商代人色彩。孔子之偉大，正因他是商代之後而到了魯國，周尚文，孔子崇拜周公，遂集古代商周兩代大成而又上通之於虞夏。還有楚國，和北方諸夏又稍不同。天文學在楚國很盛，中國古代天文學上用的名詞都很特別，我懷疑它和楚國有關係。特別如《楚辭》，其中如屈原的〈離騷〉、〈天問〉，那裡講的中國古史非常多，他們又是一套。恰如我們講現代歐洲，義大利人同英國人不同，英國人同法國人不同，法國人同德國、奧國人又不同。地域不同、傳統不同。中國在春秋時代也有很多的不同。諸位讀《國語》，讀〈魯語〉就多儒家言，〈齊語〉就只講管仲，多法家言，〈晉語〉更較近讀歷史，〈楚語〉又是另外一種。在《國語》裡有一篇〈鄭語〉，其實這一篇〈鄭語〉只就是從〈楚語〉中分出來。又如〈吳語〉、〈越語〉，〈吳語〉也只是從〈越語〉中分出，只講范蠡、文種，講的是權謀權術，這些在春秋時代還沒有，是後來新興的，而把來假託在范蠡身上。倘使我們這樣來看《國語》，便知《國語》材料也並非不可靠，但決不是說編《左傳》餘下來的材料便成《國語》。《國語》應是由另一人來編集，這些材料也是從各國來，但未能像《左傳》這樣彙在一塊而把來融鑄了。而且這些材料，時代先後各有不同，像〈魯語〉，便多是後起儒家藉著古代某人某事，添油添醬，潤飾成篇。如此之例，《左傳》中也有。在《左傳》中的記事部分，決非偽造，但《左傳》中記言部分，便有些不可靠。若我們要取材《左傳》來寫一部春秋時代人之思想史，那在運用材料上，便得小心。〈齊語〉中的管子，則決非春秋時代之真管子。而〈晉語〉則比較是記事部分多，或許會有更早於《左傳》中的材料也不可知。</p>
+<p>我們隨著講到《國策》，《國策》裡有大部分材料盡是縱橫家之言，都出三晉之士。然而《國策》中如〈魏策〉、〈趙策〉等，有一部分材料卻很近《國語》中的〈晉語〉。可見當時歷史材料三晉為多，有很可信的，也有很不可信的，那便是縱橫家言了。</p>
+<p>我在《先秦諸子繫年》裡講《左傳》，就連帶講到《國語》，主要把《國語》分國看，認為《國語》這書是雜拼的，只把很多材料拼在一起。有的材料早，有的材料遲。齊國人的話，魯國人的話，晉國人的話，楚國人的話，越國人的話，都不相同。再把這看法來看《國策》，近乎《國語》的是一部分，三晉縱橫之士的說話又是一部分。講到這裡，我要提出一個極大的問題，就是中國古代人對歷史記載有一個很特別的地方，就是所謂「記言」、「記事」之分。諸位都說歷史是記事的，但中國古人看重歷史，不僅看重其事，還更看重講話。從前人認為《尚書》是記言的，如誓、誥、謨、訓，不都是講話嗎？我第一次講《尚書》，提出〈召誥〉篇，那就是召公同人講話。《國語》、《國策》裡很多只是講話，一段一段保留在那裡，就是歷史。而《左傳》中主要的，乃是兩百四十年的事情放在那裡，便顯然見得一是記言，一是記事了。</p>
+<p>我們再進一步講，固沒有在事情中沒有講話，也沒有講話而不牽涉到事情的，這裡我們不能太嚴格的分。我在〈西周書文體辨〉裡，就說講話裡必兼記事，而《左傳》亦在記事裡就連帶記著很多的「言」。我們只能說中國古代言與事並重，說話同行事一樣看重，但並不能說中國古代人把講話同行事分別開，如說「左史記言，右史記事」，這話恐有些靠不住。又如說：「動則左史書之，言則右史書之。」一個天子的行動，由左史寫下來，他的講話，由右史寫下來，此和說左史記言，右史記事，恰相反對。又且在古書裡可找到許多史官名，而並無所謂左史與右史的分別。所以我疑心這些話靠不住。可是中國古代人對於歷史既看重事情又看重講話，那是一定的。</p>
+<p>現在我們再講到記言，這個「言」字也和我們現在人所講「思想」有一些不同。當然講話都由思想來，可是說中國歷史裡看重講話，不能便說是看重思想。思想二字乃是我們的現代觀念，而且我們今天所講的思想，也和西方人講「哲學」有不同。我曾寫了一本《中國思想史》，但並沒有稱它為「中國哲學史」。言和思想和哲學，這三者均是稍有不同。言和事緊密相連，但並不即是思想。思想可和事分開，但並不即是哲學。哲學乃是思想之有特殊結構的。如縱橫家言，我們最多只能說那時有一套縱橫思想，但並不能說那時有一套縱橫家的哲學。</p>
+<p>從另一方面講，言一定是思想，哲學也一定是思想。我們可以這樣說，隨便的說話就是言，這些說話用特殊的某一種的說法來說，就變成了哲學。這不是說話不同，而是思想方法之不同。思想一定要成一個體系，非如胡思亂想。但這個體系，又可分兩種。一種是生命體，一種是機械體。怎叫生命體呢？如盆裡這一枝花，這是有生命的。怎叫機械體呢？如這張桌子，它是一個機械體。我們思想的發展，都應有一個生命。思想發展就有許多話，話多了，遂成為一個結構，而那結構太固定性了，便好像機械似的，那就成為了一套哲學。中國人思想偏近生命性的，它的發展仍只應稱之曰「言」。如孔子講話，自然從他的思想來，但我們今天每有人說孔子的思想沒有組織，不成為一套哲學。組織也只是一套結構，但結構得太嚴密，或說是太形式化了，便成為機械化，便會減少或損失了它的生命性。孔子以前有一位叔孫豹，他講人有立德、立功、立言三不朽。暫不講立德。立功、立言不就是言與事並重嗎？叔孫豹那句話，兩千五百年到今天，我們中國人還在這樣講，這不是他的立言不朽嗎？但這只是一句話，並不成一套哲學。西方一位哲學家講話，他往往不是在講一句話，而往往是在寫一本書。有組織，有結構，講到最後，自成一套理論。中國人的理論，往往脫口而出，只是說話。沒有系統，沒有組織，一個人在那裡平白出口講，不成哲學，可是它確是一番思想啊！雖然由他一個人隨口講，竟可跑到我們全世界人的心裡，大家認為對，那就是立言。</p>
+<p>又如說馬克斯，他著的《資本論》，若說資本家怎樣賺錢，論到資本的利潤，說這是剝削勞工階級，這是馬克斯住在倫敦天天看報與訪問調查各個新興廠家，有根有據，才提出這些話，這些話確是對，但在中國人簡單一句話就講明白了，這稱做「為富不仁」。要賺錢發財，總是有點不很仁道。在我們只是一句話，在馬克斯則成了一套哲學。若馬克斯這套哲學只講到這裡，那麼今天就會有人駁他，說今天如美國人工資這樣高，而且一個大資本家的廠公開發賣股票，工人也可買，賺來的錢還要抽很高的所得稅，所以美國人今天已不能叫做資本主義的社會，已經是共產主義的社會了，可是這句話最多只能駁馬克斯，不能駁中國人為富不仁的話，資本主義還是為富不仁。這且不講。馬克斯因要講經濟利潤，慢慢講到階級鬥爭，再講上去，講歷史哲學，講唯物史觀，講存在決定意識，這就成了一套哲學，這一套哲學可就害人不淺。但他的《資本論》，千門萬戶有一個大的結構，急切要駁倒它，便不易。他的一套哲學，已成了一套機械。中國人一句話脫口而出就是一句話，可是這句話也可顛撲不破，此所謂立言。故我們中國人的思想是生命性的，這句話就是一個思想之菁華，像一棵樹從根慢慢長出枝，開花結果，有生命。西方人的一句話，往往成為思想的一塊化石。如馬克斯說：「存在決定意識。」你要問這句話怎麼來，他便原原本本有一套哲學慢慢兒地同你講，可是這句話實際上是死的！而中國人一句話，總要求其是活的。如孔子講仁，今天我們都要學西洋人講哲學的方法，來講孔子的「仁」。那麼如《論語》裡孔子說「剛毅木訥近仁」，這話意義無窮，可是當下則只是一句話。又如說「仁者其言也訒」，或者說「仁者先難而後獲」，如此之類，若我們把《論語》裡孔子論仁，依照西洋人的哲學來重作一篇文章，加以組織，成為結構，這些話怕會一句都用不上，或者說這些話都變成不重要的了。我們要知中國人所謂的「言」，不能以看西方人哲學的眼光來看。我們今天要把西方人的哲學來發揮中國人的「言」，而不悟這裡有一個不同。如叔孫豹立德、立功、立言三不朽，這話就不朽了。但若講哲學，這話便成無頭無尾，沒有結構，沒有系統，沒有組織。照西方人的哲學著作，也有許多是多餘的，講了一本書，最後也只是一句話。你說「存在決定意識」，我說不對，也就完了。讀中國史，不便要兼通哲學，但中國史裡言事並重，如縱橫家言，也是一套話，卻又不能說它是立言不朽。可見治中國學問，還是有中國的一套，不能不另有講究。</p>
+<p>現在說中國史學有記言、記事兩條大路。像《國語》、《國策》都是記言的，遠從《尚書》一路下來。但到孔子時代，記言又走了另外一條路，那就是百家言。孔子、孟子、荀子是儒家，老子、莊子是道家，各自著書。如《論語》、《老子》等書，發展成另一條大路，中國人叫它做「子書」。中國人從經學裡發展出史學，我們已經講過，《尚書》、《春秋》便都在經學裡的。但史學又發展出了一套子學，子學則只是記「言」的，從其所言，可來研究他們的思想。我們要研究中國思想，從周公開始，周公以前則難講了。近則從春秋開始，如看一部《左傳》，它裡面所載賢卿大夫種種講話，不曉得有多少，但此許多講話，有可信，有不可信。有價值的，有無價值的。要講史學，便又該講到《孟子》所謂的知言之學。又當知一書有一書之體制，中國書有中國書的體制。</p>
+<p>今天諸位讀書，主要在找材料。但如諸位講中國思想，儘向《論語》、《孟子》、《老子》、《莊子》書中找材料，卻不找到《左傳》，認為《左傳》是一部歷史書。不知《左傳》裡就有很多偉大思想在其內。我寫《中國思想史》，從《左傳》裡就舉出兩人，一是子產，一是叔孫豹。叔孫豹講三不朽，這時孔子已經三歲。子產在《左傳》裡有一段話講鬼神，講得非常有意義，那時孔子已經十七歲。又過了十四年，子產又講「天道遠，人道邇」，這一句話只六個字，似乎不成一套哲學，可是孔子《論語》就是講人道不講天道，根據子產這句話的思想發展而來。我講中國思想，在春秋時代舉出兩人，都在孔子已生以後，孔子怎會不受他們影響？可是今天，把這部《左傳》擱在一旁不理了，便會使古代史無法講，而下邊歷史也都無法講。講中國思想，講來講去，從老子開始呢？還是從孔子開始？只講諸子、講經史，把中國史從腰切斷了。若我們把此兩百四十年春秋時代人的思想，見在《左傳》裡的，再接上《尚書》裡的思想，便如偽古文《尚書》裡也還有很多材料。這些中國古代思想，怕會花去諸位一輩子工夫去研究。所以我說《左傳》是一部研究中國古史的基準觀點所在。我前面講《左傳》舉了十項大事，而思想一項沒有舉在裡面。</p>
+<p>現在我再講一件，如孔子說：「必也正名乎！……名不正，則言不順；言不順，則事不成；……君子名之必可言也，言之必可行也。」這可見中國人看重講話看得非常重要。近人都看不起孔子的正名主義，罵孔子「君君、臣臣、父父、子子」是一套封建思想，但孔子所謂必也正名，是說每一句話中總有一個名，名不正了，就言不順，言不順的該無法做成事。中國史學，言與事並重，這是中國人的一套歷史哲學，所謂「君子名之必可言，言之必可行」，如近人好言和平，而不重正義，這便是言之不可行了。</p>
+<p>中國人看重《左傳》，不看重《國語》、《國策》，正因為《左傳》裡有許多賢卿大夫之言，不能和《國語．晉語》裡所載有許多後代迂儒之偽言，乃至如《國策》裡的許多縱橫家言，儘有要不得，乃至不值重視的。若諸位沒有知言工夫，只把中國歷史當作記事一邊去看，便失掉了中國史學中重要的一部分。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="春秋三傳.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="史記.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="春秋三傳.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="史記.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
